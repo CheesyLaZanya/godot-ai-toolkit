@@ -1,0 +1,28 @@
+# Description
+
+Todo and idea list for our Godot AI Toolkit entry to the Assembly AI 2022 Hackathon
+
+# Todo
+
+Here are the things we've identified need done to complete this hackathon/project.
+
+- [x] Setup public GitHub repo for project
+- [x] Add team member to collaborators
+- [x] Setup todo and idea list section for collaboration
+- [x] Dump initial idea list
+- [ ] Add initial Godot Project
+- [ ] Sign up for devpost accounts
+- [ ] Find documentation on creating Godot plugins
+- [ ] TBD ...
+
+# Ideas
+
+The goal for this project is to create a framework to help interface between Godot and AI APIs to help game developers create more personalized experiences in an easy way.
+
+## Rough Ideas
+- Ideally make this a Godot plugin
+- Use OpenAI for personalized story interactions?
+- Use Co:here for semantic analyze of answers for more appropriate character reactions?
+- Use Uberduck to allow characters to speak written or generated dialog?
+- Use Assembly AI for easy subtitle creation?
+- Use Stability AI for generating dynamic backdrops or other personalized content?
