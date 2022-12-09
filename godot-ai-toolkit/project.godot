@@ -14,6 +14,10 @@ config/name="Godot AI Toolkit"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ai_toolkit/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="mobile"

@@ -14,6 +14,8 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [ ] Sign up for devpost accounts
 - [x] Find documentation on creating Godot plugins
     https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html
+- [x] Add empty plugin
+- [ ] Find documentation for calling APIs from Godot
 - [ ] TBD ...
 
 # Ideas
