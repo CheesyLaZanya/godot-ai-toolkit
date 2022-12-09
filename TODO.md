@@ -10,9 +10,10 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Add team member to collaborators
 - [x] Setup todo and idea list section for collaboration
 - [x] Dump initial idea list
-- [ ] Add initial Godot Project
+- [x] Add initial Godot Project
 - [ ] Sign up for devpost accounts
-- [ ] Find documentation on creating Godot plugins
+- [x] Find documentation on creating Godot plugins
+    https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html
 - [ ] TBD ...
 
 # Ideas
