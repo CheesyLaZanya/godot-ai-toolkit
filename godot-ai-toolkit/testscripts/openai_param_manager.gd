@@ -51,3 +51,38 @@ func print_parameters():
 	print("top_p: %s" % parameters.top_p)
 	print("frequency_penalty: %s" % parameters.frequency_penalty)
 	print("presence_penalty: %s" % parameters.presence_penalty)
+	
+
+func set_api_key(new_api_key):
+	parameters.api_key = new_api_key
+	save_parameters()
+
+
+func set_gpt_model(new_gpt_model):
+	parameters.gpt_model = new_gpt_model
+	save_parameters()
+
+
+func set_temperature(new_temperature):
+	parameters.temperature = new_temperature
+	save_parameters()
+
+
+func set_max_tokens(new_max_tokens):
+	parameters.max_tokens = new_max_tokens
+	save_parameters()
+
+
+func set_top_p(new_top_p):
+	parameters.top_p = new_top_p
+	save_parameters()
+
+
+func set_frequency_penalty(new_frequency_penalty):
+	parameters.frequency_penalty = new_frequency_penalty
+	save_parameters()
+
+
+func set_presence_penalty(new_presence_penalty):
+	parameters.presence_penalty = new_presence_penalty
+	save_parameters()
