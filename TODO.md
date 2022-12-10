@@ -22,7 +22,10 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Find documentation for calling APIs from Godot
     https://docs.godotengine.org/en/latest/classes/class_httprequest.html
 - [x] Make proof of concept of calling Open AI api
-- [ ] Find documentation on encrypting values in Godot
+- [x] Find documentation on encrypting values in Godot
+    https://docs.godotengine.org/en/latest/classes/class_crypto.html
+- [x] Create basic encryption PoC
+- [ ] Generalize encryption helper
 - [ ] Setup encryption for API keys to allow saving them in project without leaking them in git.
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
