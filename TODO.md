@@ -35,6 +35,7 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
 - [ ] Create usage information/documentations
+- [ ] Retry plugin autoload or remove commented out autoload code 
 - [ ] TBD ...
 
 # Ideas

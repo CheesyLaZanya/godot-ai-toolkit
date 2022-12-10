@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://pqba50d0p74n"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05j0d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xuv1"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_url41"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3o236"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -37,7 +37,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.0510753
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_05j0d")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xuv1")
 metadata/_edit_use_anchors_ = true
 
 [node name="OpenAI Label" type="Label" parent="Dock Panel/OpenAI Panel/OpenAI Label Panel"]
@@ -73,7 +73,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_url41")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3o236")
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
@@ -108,7 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_url41")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3o236")
 alignment = 1
 item_count = 12
 fit_to_longest_item = false
@@ -171,7 +171,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_url41")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3o236")
 alignment = 1
 metadata/_edit_use_anchors_ = true
 

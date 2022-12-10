@@ -15,6 +15,10 @@ run/main_scene="res://testscenes/TestAPIs.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+OpenAIParamManager="*res://testscripts/openai_param_manager.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ai_toolkit/plugin.cfg")
