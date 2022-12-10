@@ -39,8 +39,9 @@ func send_prompt(prompt):
 func decrypt_api_key(global_parameters):
 	var key = EncryptionUtility.get_encryption_key()
 	var encrypted_key = global_parameters.api_key
-	var open_ai_api_key = EncryptionUtility.decrypt_data(key, PackedByteArray([encrypted_key]))
-	print(open_ai_api_key)
+	var key_array = encrypted_key.replace("[", "").replace("]", "").split(",")
+	var open_ai_api_key = EncryptionUtility.decrypt_data(key, PackedByteArray(Array(key_array)))
+	print("Api key: %s " % open_ai_api_key)
 	return open_ai_api_key
 
 
