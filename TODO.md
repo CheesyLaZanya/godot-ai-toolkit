@@ -25,13 +25,13 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [ ] Add the rest of the configurable parameters to the OpenAI section in the dock
 - [ ] Hook dock up to saving API key
 - [ ] Hook up rest of dock saving parameters
-- [ ] Find documentation on encrypting values in Godot
-- [ ] Setup encryption for API keys to allow saving them in project without leaking them in git
 - [x] Find documentation on encrypting values in Godot
     https://docs.godotengine.org/en/latest/classes/class_crypto.html
 - [x] Create basic encryption PoC
 - [ ] Generalize encryption helper
 - [ ] Setup encryption for API keys to allow saving them in project without leaking them in git.
+- [x] Add parameter saving and loading
+- [x] Used saved parameters in test api call
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
 - [ ] Create usage information/documentations
