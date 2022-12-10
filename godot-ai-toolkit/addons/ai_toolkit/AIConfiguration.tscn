@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p34s3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omce5"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xt154"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbjh3"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -40,7 +40,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.0510753
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_p34s3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_omce5")
 metadata/_edit_use_anchors_ = true
 
 [node name="OpenAI Label" type="Label" parent="Dock Panel/OpenAI Panel/OpenAI Label Panel"]
@@ -68,19 +68,6 @@ anchor_bottom = 0.129542
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="API Key Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/API Key Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.530612
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_xt154")
-alignment = 1
-secret = true
-metadata/_edit_use_anchors_ = true
-
 [node name="API Key Label" type="Label" parent="Dock Panel/OpenAI Panel/API Key Panel"]
 layout_mode = 1
 anchors_preset = -1
@@ -94,7 +81,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Model Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+[node name="API Key Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/API Key Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.530612
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbjh3")
+alignment = 1
+secret = true
+metadata/_edit_use_anchors_ = true
+
+[node name="GPT Model Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.134281
@@ -103,7 +103,23 @@ anchor_bottom = 0.21169
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Model Dropdown" type="OptionButton" parent="Dock Panel/OpenAI Panel/Model Panel"]
+[node name="GPT Model Label" type="Label" parent="Dock Panel/OpenAI Panel/GPT Model Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0204081
+anchor_right = 1.0
+anchor_bottom = 0.510203
+offset_bottom = 0.000114441
+grow_horizontal = 2
+tooltip_text = "Test"
+mouse_filter = 1
+text = "GPT Model
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GPT Model Dropdown" type="OptionButton" parent="Dock Panel/OpenAI Panel/GPT Model Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489795
@@ -111,7 +127,7 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_xt154")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbjh3")
 alignment = 1
 item_count = 12
 fit_to_longest_item = false
@@ -141,21 +157,6 @@ popup/item_11/text = "ada"
 popup/item_11/id = 11
 metadata/_edit_use_anchors_ = true
 
-[node name="Model Label" type="Label" parent="Dock Panel/OpenAI Panel/Model Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = -0.0204081
-anchor_right = 1.0
-anchor_bottom = 0.510203
-grow_horizontal = 2
-tooltip_text = "Test"
-mouse_filter = 1
-text = "Model
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [node name="Temperature Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
@@ -163,6 +164,21 @@ anchor_top = 0.21643
 anchor_right = 1.0
 anchor_bottom = 0.293839
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Temperature Label" type="Label" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0204081
+anchor_right = 1.0
+anchor_bottom = 0.510203
+offset_bottom = 9.91821e-05
+grow_horizontal = 2
+tooltip_text = "Test"
+mouse_filter = 1
+text = "Temperature"
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Temperature Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
@@ -174,7 +190,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_xt154")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbjh3")
+text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -190,20 +207,60 @@ max_value = 1.0
 step = 0.01
 metadata/_edit_use_anchors_ = true
 
-[node name="Temperature Label" type="Label" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
+[node name="Max Tokens Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.300158
+anchor_right = 1.0
+anchor_bottom = 0.377567
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Max Tokens Label" type="Label" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
 anchor_bottom = 0.510203
+offset_bottom = 0.00012207
 grow_horizontal = 2
 tooltip_text = "Test"
 mouse_filter = 1
-text = "Temperature"
+text = "Max Tokens"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Max Tokens Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.69708
+anchor_top = 0.489797
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_rbjh3")
+text = "1"
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Max Tokens Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.489797
+anchor_right = 0.645985
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+min_value = 1.0
+max_value = 2048.0
+value = 1.0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="focus_exited" from="Dock Panel/OpenAI Panel/Temperature Panel/Temperature Input" to="Dock Panel/OpenAI Panel" method="_on_temperature_input_focus_exited"]
 [connection signal="text_submitted" from="Dock Panel/OpenAI Panel/Temperature Panel/Temperature Input" to="Dock Panel/OpenAI Panel" method="_on_temperature_input_text_submitted"]
 [connection signal="value_changed" from="Dock Panel/OpenAI Panel/Temperature Panel/Temperature Slider" to="Dock Panel/OpenAI Panel" method="_on_temperature_slider_value_changed"]
+[connection signal="focus_exited" from="Dock Panel/OpenAI Panel/Max Tokens Panel/Max Tokens Input" to="Dock Panel/OpenAI Panel" method="_on_max_tokens_input_focus_exited"]
+[connection signal="text_submitted" from="Dock Panel/OpenAI Panel/Max Tokens Panel/Max Tokens Input" to="Dock Panel/OpenAI Panel" method="_on_max_tokens_input_text_submitted"]
+[connection signal="value_changed" from="Dock Panel/OpenAI Panel/Max Tokens Panel/Max Tokens Slider" to="Dock Panel/OpenAI Panel" method="_on_max_tokens_slider_value_changed"]
