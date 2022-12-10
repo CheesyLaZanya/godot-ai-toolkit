@@ -27,6 +27,11 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [ ] Hook up rest of dock saving parameters
 - [ ] Find documentation on encrypting values in Godot
 - [ ] Setup encryption for API keys to allow saving them in project without leaking them in git
+- [x] Find documentation on encrypting values in Godot
+    https://docs.godotengine.org/en/latest/classes/class_crypto.html
+- [x] Create basic encryption PoC
+- [ ] Generalize encryption helper
+- [ ] Setup encryption for API keys to allow saving them in project without leaking them in git.
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
 - [ ] Create usage information/documentations
