@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://pqba50d0p74n"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq75q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hbca"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ettx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6lgh"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -37,7 +37,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.0510753
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pq75q")
+theme_override_styles/panel = SubResource("StyleBoxFlat_3hbca")
 metadata/_edit_use_anchors_ = true
 
 [node name="OpenAI Label" type="Label" parent="Dock Panel/OpenAI Panel/OpenAI Label Panel"]
@@ -55,37 +55,102 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "OpenAI"
 
-[node name="APIKey Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+[node name="API Key Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.0510753
+anchor_top = 0.0564516
 anchor_right = 1.0
-anchor_bottom = 0.158602
+anchor_bottom = 0.209678
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="API Key Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/APIKey Panel"]
+[node name="API Key Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/API Key Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.454546
-anchor_top = 0.124999
+anchor_top = 0.438596
 anchor_right = 1.0
-anchor_bottom = 0.900001
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_8ettx")
+anchor_bottom = 1.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6lgh")
+alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
 
-[node name="API Key Label" type="Label" parent="Dock Panel/OpenAI Panel/APIKey Panel"]
+[node name="API Key Label" type="Label" parent="Dock Panel/OpenAI Panel/API Key Panel"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -13.0
-offset_right = 120.0
-offset_bottom = 13.0
-grow_vertical = 2
+anchors_preset = -1
+anchor_top = -0.0175439
+anchor_right = 1.0
+anchor_bottom = 0.438596
+grow_horizontal = 2
 tooltip_text = "Test"
 mouse_filter = 1
-text = "OpenAI API Key"
+text = "API Key"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00364964
+anchor_top = 0.212366
+anchor_right = 1.0
+anchor_bottom = 0.389785
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Dropdown" type="OptionButton" parent="Dock Panel/OpenAI Panel/Model Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00364964
+anchor_top = 0.424242
+anchor_right = 0.99635
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6lgh")
+alignment = 1
+item_count = 12
+fit_to_longest_item = false
+popup/item_0/text = "text-davinci-003"
+popup/item_0/id = 0
+popup/item_1/text = "text-curie-001"
+popup/item_1/id = 1
+popup/item_2/text = "text-babbage-001"
+popup/item_2/id = 2
+popup/item_3/text = "text-davinci-002"
+popup/item_3/id = 3
+popup/item_4/text = "text-davinci-001"
+popup/item_4/id = 4
+popup/item_5/text = "davinci-instruct-beta"
+popup/item_5/id = 5
+popup/item_6/text = "davinci"
+popup/item_6/id = 6
+popup/item_7/text = "curie-instruct-beta"
+popup/item_7/id = 7
+popup/item_8/text = "curie"
+popup/item_8/id = 8
+popup/item_9/text = "babbage"
+popup/item_9/id = 9
+popup/item_10/text = "text-ada-001"
+popup/item_10/id = 10
+popup/item_11/text = "ada"
+popup/item_11/id = 11
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Label" type="Label" parent="Dock Panel/OpenAI Panel/Model Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00364961
+anchor_top = 0.0454545
+anchor_right = 0.99635
+anchor_bottom = 0.439394
+grow_horizontal = 2
+tooltip_text = "Test"
+mouse_filter = 1
+text = "Model
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
