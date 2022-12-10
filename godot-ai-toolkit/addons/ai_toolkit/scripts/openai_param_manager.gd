@@ -2,7 +2,7 @@
 extends Node
 
 var parameters = {
-	api_key = "test",
+	api_key = "Secret",
 	gpt_model = "text-davinci-003",
 	temperature = 0.7,
 	max_tokens = 256,
@@ -16,8 +16,6 @@ var parameters_file_path = "res://parameters/openai"
 func _ready():
 	if not FileAccess.file_exists(parameters_file_path):
 		save_parameters()
-	
-	load_parameters()
 
 
 func save_parameters():

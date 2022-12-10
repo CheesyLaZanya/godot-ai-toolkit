@@ -1,11 +1,11 @@
+@tool
 extends Node
 
-func _ready():
-	get_available_models()
-	var name = "Bob"
-	var prompt = "The following is a short commentary on a player naming themselves '%s' in a romantic visual novel: " % name
+# func _ready():
+# 	var name = "Bob"
+# 	var prompt = "The following is a short commentary on a player naming themselves '%s' in a romantic visual novel: " % name
 
-	send_prompt(prompt)
+# 	send_prompt(prompt)
 
 
 func send_prompt(prompt):

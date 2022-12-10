@@ -28,17 +28,20 @@ func _ready():
 	frequency_penalty_slider_node = $"Frequency Penalty Panel/Frequency Penalty Slider"
 	presence_penalty_input_node = $"Presence Penalty Panel/Presence Penalty Input"
 	presence_penalty_slider_node = $"Presence Penalty Panel/Presence Penalty Slider"
-
+	
+	load_gpt_model_input_list()
 	load_configuration_values()
 
 
 func load_configuration_values():
+	OpenAIParamManager.load_parameters()
 	var openai_global_parameters = OpenAIParamManager.get_parameters()
 	
-	api_key_input_node.text = openai_global_parameters.api_key
+	api_key_input_node.text = OpenAIAPI.decrypt_api_key(openai_global_parameters)
 	
-	#var gpt_model_input_index = gpt_model_input_node.get_item_index(openai_global_parameters.gpt_model)
-	#gpt_model_input_node.select(gpt_model_input_index)
+	var models = OpenAIAPI.get_available_models()
+	var gpt_model_input_index = models.find(openai_global_parameters.gpt_model, 0)
+	gpt_model_input_node.select(gpt_model_input_index)
 	
 	temperature_input_node.text = str(openai_global_parameters.temperature)
 	temperature_slider_node.value = float(openai_global_parameters.temperature)
@@ -54,7 +57,13 @@ func load_configuration_values():
 	
 	presence_penalty_input_node.text = str(openai_global_parameters.presence_penalty)
 	presence_penalty_slider_node.value = float(openai_global_parameters.presence_penalty)
+
+func load_gpt_model_input_list():
+	var models = OpenAIAPI.get_available_models()
+	gpt_model_input_node.clear()
 	
+	for model in models:
+		gpt_model_input_node.add_item(model, models.find(model,0))
 
 func update_slider_float_value(slider_node, value):
 	if value.is_valid_float():

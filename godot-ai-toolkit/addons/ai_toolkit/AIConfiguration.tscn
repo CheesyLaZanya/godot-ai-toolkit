@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cyam"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgws3"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tr72e"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxh2d"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -40,7 +40,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.0510753
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cyam")
+theme_override_styles/panel = SubResource("StyleBoxFlat_bgws3")
 metadata/_edit_use_anchors_ = true
 
 [node name="OpenAI Label" type="Label" parent="Dock Panel/OpenAI Panel/OpenAI Label Panel"]
@@ -89,8 +89,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "[67, 155, 153, 236, 8, 77, 231, 214, 164, 137, 189, 146, 215, 174, 77, 83, 190, 31, 185, 241, 177, 225, 41, 52, 85, 156, 244, 47, 214, 31, 96, 137, 36, 236, 199, 244, 93, 157, 247, 89, 70, 187, 126, 114, 187, 113, 109, 235, 241, 243, 193, 242, 206, 228, 250, 249, 181, 244, 25, 214, 134, 135, 77, 88, 104, 21, 254, 160, 101, 50, 225, 106, 208, 10, 9, 109, 106, 146, 108, 8, 71, 216, 194, 252, 249, 1, 214, 185, 166, 93, 89, 7, 222, 226, 165, 55, 166, 54, 32, 244, 190, 34, 112, 169, 120, 91, 142, 41, 217, 252, 86, 65, 11, 20, 12, 176, 151, 240, 227, 124, 10, 109, 34, 161, 245, 215, 244, 10, 24, 104, 207, 173, 65, 47, 164, 73, 252, 250, 56, 202, 170, 53, 44, 200, 186, 108, 202, 47, 227, 191, 239, 117, 254, 12, 54, 200, 16, 46, 53, 81, 17, 105, 8, 235, 170, 149, 188, 104, 187, 206, 197, 145, 178, 125, 169, 71, 28, 238, 11, 3, 10, 181, 33, 181, 14, 192, 2, 47, 101, 79, 94, 145, 23, 95, 76, 250, 124, 42, 139, 69, 12, 91, 18, 2, 28, 236, 222, 181, 62, 242, 211, 3, 228, 47, 60, 106, 187, 107, 161, 73, 151, 127, 41, 197, 1, 62, 207, 211, 241, 9, 165, 151, 97, 151, 72, 10, 17, 82, 224, 22, 126, 63, 97, 203, 244, 81, 14, 238, 152, 57, 225, 54, 160, 41, 87, 29, 245, 49, 46, 165, 222, 137, 78, 221, 23, 146, 101, 75, 116, 166, 158, 144, 167, 180, 220, 208, 126, 240, 208, 23, 164, 1, 175, 186, 62, 196, 165, 219, 213, 131, 176, 242, 151, 46, 140, 85, 110, 52, 212, 79, 122, 47, 190, 40, 194, 73, 209, 236, 60, 30, 104, 30, 30, 138, 115, 40, 205, 3, 134, 118, 159, 103, 151, 145, 0, 122, 46, 231, 238, 234, 186, 197, 247, 235, 38, 98, 230, 233, 108, 133, 102, 162, 36, 177, 14, 168, 106, 180, 184, 0, 159, 115, 246, 137, 129, 182, 34, 91, 47, 196, 206, 15, 12, 190, 39, 115, 230, 26, 240, 147, 118, 57, 207, 65, 54, 224, 149, 243, 157, 74, 249, 151, 147, 241, 247, 163, 253, 9, 230, 198, 108, 255, 146, 18, 66, 105, 108, 55, 223, 33, 25, 112, 226, 200, 251, 85, 107, 60, 113, 184, 167, 210, 104, 116, 234, 89, 230, 155, 150, 93, 38, 54, 100, 31, 179, 53, 133, 8, 42, 62, 144, 95, 123, 26, 52, 21, 69, 235, 37, 115, 144, 168, 116, 242, 96, 166, 178, 56, 95, 52, 242, 225, 8, 150, 86, 27, 135, 174, 83, 194, 199, 74, 162, 44, 69, 39, 35, 239, 7, 236, 109, 81, 149, 155, 40, 164, 201, 67, 176, 217, 181, 130, 75, 209, 50, 222, 207, 49, 231, 82, 82, 245, 124, 41, 152, 109, 55, 81, 247, 208, 102, 55, 31, 129, 146, 35, 213, 54, 179, 215, 168, 144]"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "test"
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
@@ -128,34 +128,34 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
 alignment = 1
 item_count = 12
-selected = 3
+selected = 1
 fit_to_longest_item = false
-popup/item_0/text = "text-davinci-003"
+popup/item_0/text = "ada"
 popup/item_0/id = 0
-popup/item_1/text = "text-curie-001"
+popup/item_1/text = "babbage"
 popup/item_1/id = 1
-popup/item_2/text = "text-babbage-001"
+popup/item_2/text = "curie"
 popup/item_2/id = 2
-popup/item_3/text = "text-davinci-002"
+popup/item_3/text = "curie-instruct-beta"
 popup/item_3/id = 3
-popup/item_4/text = "text-davinci-001"
+popup/item_4/text = "davinci"
 popup/item_4/id = 4
 popup/item_5/text = "davinci-instruct-beta"
 popup/item_5/id = 5
-popup/item_6/text = "davinci"
+popup/item_6/text = "text-ada-001"
 popup/item_6/id = 6
-popup/item_7/text = "curie-instruct-beta"
+popup/item_7/text = "text-babbage-001"
 popup/item_7/id = 7
-popup/item_8/text = "curie"
+popup/item_8/text = "text-curie-001"
 popup/item_8/id = 8
-popup/item_9/text = "babbage"
+popup/item_9/text = "text-davinci-001"
 popup/item_9/id = 9
-popup/item_10/text = "text-ada-001"
+popup/item_10/text = "text-davinci-002"
 popup/item_10/id = 10
-popup/item_11/text = "ada"
+popup/item_11/text = "text-davinci-003"
 popup/item_11/id = 11
 metadata/_edit_use_anchors_ = true
 
@@ -192,8 +192,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "0.7"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "0.29"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -207,6 +207,7 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 1.0
 step = 0.01
+value = 0.29
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
@@ -242,8 +243,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "1"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "1695"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -257,7 +258,7 @@ grow_horizontal = 2
 grow_vertical = 0
 min_value = 1.0
 max_value = 2048.0
-value = 1.0
+value = 1695.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
@@ -293,8 +294,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "0"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "0.14"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -308,6 +309,7 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 1.0
 step = 0.01
+value = 0.14
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
@@ -343,8 +345,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "0"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "1.72"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -358,6 +360,7 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 2.0
 step = 0.01
+value = 1.72
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
@@ -393,8 +396,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_tr72e")
-text = "0"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+text = "1.41"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -408,6 +411,7 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 2.0
 step = 0.01
+value = 1.41
 metadata/_edit_use_anchors_ = true
 
 [connection signal="focus_exited" from="Dock Panel/OpenAI Panel/API Key Panel/API Key Input" to="Dock Panel/OpenAI Panel" method="_on_api_key_input_focus_exited"]
