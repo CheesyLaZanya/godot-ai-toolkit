@@ -10,22 +10,24 @@ var parameters = {
 	presence_penalty = 0
 }
 
-var param_file_path = "res://parameters/openai"
+var parameters_file_path = "res://parameters/openai"
 
 func _ready():
-	if not FileAccess.file_exists(param_file_path):
-		save_params()
+	if not FileAccess.file_exists(parameters_file_path):
+		save_parameters()
 	
-	load_params()
+	load_parameters()
 
-func save_params():
+
+func save_parameters():
 	var parameters_json = JSON.new().stringify(parameters, "\t")
 	
-	var file = FileAccess.open(param_file_path, FileAccess.WRITE)
+	var file = FileAccess.open(parameters_file_path, FileAccess.WRITE)
 	file.store_string(parameters_json)
 
-func load_params():
-	var file = FileAccess.open(param_file_path, FileAccess.READ)
+
+func load_parameters():
+	var file = FileAccess.open(parameters_file_path, FileAccess.READ)
 	
 	var file_contents = file.get_as_text()
 	
@@ -34,9 +36,14 @@ func load_params():
 	
 	parameters = json_parser.get_data()
 
-	print_params()
+	print_parameters()
 
-func print_params():
+
+func get_parameters():
+	return parameters
+
+
+func print_parameters():
 	print("api_key: %s" % parameters.api_key)
 	print("gpt_model: %s" % parameters.gpt_model)
 	print("temperature: %s" % parameters.temperature)

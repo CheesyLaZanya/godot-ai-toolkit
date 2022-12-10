@@ -15,8 +15,8 @@ func _ready():
 	var decrypted_data = decrypt_data(key, encrypted_data)
 	
 	# Checks
-	print (encrypted_data)
-	print (decrypted_data)
+	# print (encrypted_data)
+	# print (decrypted_data)
 	assert(decrypted_data == data)
 
 
