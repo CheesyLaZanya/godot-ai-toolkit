@@ -54,7 +54,9 @@ func print_parameters():
 	
 
 func set_api_key(new_api_key):
-	parameters.api_key = new_api_key
+	var key = EncryptionUtility.get_encryption_key()
+	var encrypted_key = EncryptionUtility.encrypt_data(key, new_api_key)
+	parameters.api_key = encrypted_key
 	save_parameters()
 
 

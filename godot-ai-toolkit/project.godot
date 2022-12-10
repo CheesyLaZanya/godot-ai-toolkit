@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-OpenAIParamManager="*res://testscripts/openai_param_manager.gd"
+OpenAIParamManager="*res://addons/ai_toolkit/scripts/openai_param_manager.gd"
+EncryptionUtility="*res://addons/ai_toolkit/scripts/encryption_utility.gd"
 
 [editor_plugins]
 

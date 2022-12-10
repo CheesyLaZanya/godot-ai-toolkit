@@ -1,24 +1,7 @@
 extends Node
 
 var crypto = Crypto.new()
-
 var key_path = "user://generated.key"
-
-func _ready():
-	var key = get_encryption_key()
-	
-	# Encryption
-	var data = "Some data"
-	var encrypted_data = encrypt_data(key, data)
-	
-	# Decryption
-	var decrypted_data = decrypt_data(key, encrypted_data)
-	
-	# Checks
-	# print (encrypted_data)
-	# print (decrypted_data)
-	assert(decrypted_data == data)
-
 
 func get_encryption_key():
 	var key = CryptoKey.new()
