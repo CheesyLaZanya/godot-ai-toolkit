@@ -19,7 +19,11 @@ Here are the things we've identified need done to complete this hackathon/projec
     https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html#a-custom-dock
     - [ ] Use LineEdit for secret fields (API Keys)
         https://docs.godotengine.org/en/latest/classes/class_lineedit.html
-- [ ] Find documentation for calling APIs from Godot
+- [x] Find documentation for calling APIs from Godot
+    https://docs.godotengine.org/en/latest/classes/class_httprequest.html
+- [x] Make proof of concept of calling Open AI api
+- [ ] Find documentation on encrypting values in Godot
+- [ ] Setup encryption for API keys to allow saving them in project without leaking them in git.
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
 - [ ] Create usage information/documentations
