@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqhdptr446sqv"]
+[gd_scene load_steps=4 format=3 uid="uid://bqhdptr446sqv"]
 
 [ext_resource type="Script" path="res://testscripts/open_ai_api_test.gd" id="1_ncv2e"]
 [ext_resource type="Script" path="res://testscripts/encryption_test.gd" id="2_3ecof"]
+[ext_resource type="Script" path="res://testscripts/openai_param_manager.gd" id="3_j3e71"]
 
 [node name="TestAPIs" type="Node"]
 
@@ -10,3 +11,6 @@ script = ExtResource("1_ncv2e")
 
 [node name="TestEncryption" type="Node" parent="."]
 script = ExtResource("2_3ecof")
+
+[node name="ParamManager" type="Node" parent="."]
+script = ExtResource("3_j3e71")
