@@ -15,7 +15,14 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Find documentation on creating Godot plugins
     https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html
 - [x] Add empty plugin
+- [ ] Create custom dock
+    https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html#a-custom-dock
+    - [ ] Use LineEdit for secret fields (API Keys)
+        https://docs.godotengine.org/en/latest/classes/class_lineedit.html
 - [ ] Find documentation for calling APIs from Godot
+- [ ] Finalize plugin information
+- [ ] Create setup instructions
+- [ ] Create usage information/documentations
 - [ ] TBD ...
 
 # Ideas
