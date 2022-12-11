@@ -40,11 +40,11 @@ Here are the things we've identified need done to complete this hackathon/projec
         - [x] Have open AI describe the date briefly.
     - [x] Ask how they enjoyed the date
         - [x] Have date respond based on Cohere analysis, use "where" in task description.
-- [ ] Make sample RPG Intro
-    - [ ] Ask for name
-        - [ ] Comment on how "fantasy" the name is or isn't?
-    - [ ] Ask for their chosen weapon
-        - [ ] Respond sarcastically about it
+- [x] Make sample RPG Intro
+    - [x] Ask for name
+        - [x] Comment on how "fantasy" the name is or isn't?
+    - [x] Ask for their chosen weapon
+        - [x] Respond sarcastically about it
 - [x] Cleanup example start scene that links to others (or remove if only one finished)
 - [x] Review if we're completing the RPG or not and update our readme if so.
 - [x] Either fix secret folder starting in the project, or add to instructions to create it.
@@ -52,14 +52,13 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Split API key out from parameters
 - [x] Code refactor/improvement
 - [x] Create project icon
-- [ ] Finalize plugin information
+- [x] Finalize plugin information
 - [x] Create setup instructions
 - [x] Create usage information/documentation
-- [ ] Retry plugin autoload or remove commented out autoload code 
-- [ ] Make simple presentation deck
-    - [ ] Team overview
-    - [ ] Problem overview
-    - [ ] Proposed solution
-    - [ ] Next Steps/Learnings/etc. as applicable
+- [ ] Make simple presentation notes/scripts
 - [ ] Record project demo
 - [ ] Submit on devpost as team
+
+# Future Todo
+
+- [ ] Make plugin autoload all singleton's automatically.
