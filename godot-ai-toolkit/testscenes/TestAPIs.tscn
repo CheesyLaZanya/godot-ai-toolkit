@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv6gdfdloi5r6"]
-
-[ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_api.gd" id="1_ncv2e"]
-
-[node name="TestAPIs" type="Node"]
-
-[node name="OpenAI" type="Node" parent="."]
-script = ExtResource("1_ncv2e")

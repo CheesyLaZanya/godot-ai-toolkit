@@ -33,6 +33,7 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
 - [ ] Look at collapsible dock sections for different AI/APIs
+- [ ] Split API key out from other params?
 - [ ] Setup example scene
 - [ ] Code refactor/improvement
 - [ ] Create project icon
