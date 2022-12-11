@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://pqba50d0p74n"]
+[gd_scene load_steps=7 format=3 uid="uid://pqba50d0p74n"]
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
 [ext_resource type="Script" path="res://addons/ai_toolkit/ai_selection.gd" id="1_uvxuy"]
+[ext_resource type="Script" path="res://addons/ai_toolkit/cohere_configuration.gd" id="3_08jya"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x83xn"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmqpb"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1xj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fdu4"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6v0a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_637mu"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -37,7 +38,7 @@ anchor_top = 0.00925926
 anchor_right = 0.979021
 anchor_bottom = 0.0601852
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_x83xn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_gmqpb")
 metadata/_edit_use_anchors_ = true
 
 [node name="AI Selection" type="OptionButton" parent="Dock Panel/AI Selection Panel"]
@@ -48,7 +49,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_0s1xj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6fdu4")
 alignment = 1
 expand_icon = true
 item_count = 3
@@ -102,7 +103,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
@@ -140,7 +141,7 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 alignment = 1
 item_count = 12
 selected = 11
@@ -204,7 +205,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 text = "0.7"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -255,7 +256,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 text = "256"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -306,7 +307,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 text = "1"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -357,7 +358,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -407,7 +408,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -425,12 +426,14 @@ step = 0.01
 metadata/_edit_use_anchors_ = true
 
 [node name="Cohere Panel" type="Panel" parent="Dock Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020979
 anchor_top = 0.066358
 anchor_right = 0.979021
 anchor_bottom = 1.04321
+script = ExtResource("3_08jya")
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Panel" type="Panel" parent="Dock Panel/Cohere Panel"]
@@ -463,7 +466,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
@@ -498,9 +501,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_637mu")
 alignment = 1
+item_count = 3
+selected = 1
 fit_to_longest_item = false
+popup/item_0/text = "small"
+popup/item_0/id = 0
+popup/item_1/text = "medium"
+popup/item_1/id = 1
+popup/item_2/text = "large"
+popup/item_2/id = 2
 metadata/_edit_use_anchors_ = true
 
 [connection signal="item_selected" from="Dock Panel/AI Selection Panel/AI Selection" to="Dock Panel" method="_on_ai_selection_item_selected"]
@@ -522,3 +533,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="focus_exited" from="Dock Panel/OpenAI Panel/Presence Penalty Panel/Presence Penalty Input" to="Dock Panel/OpenAI Panel" method="_on_presence_penalty_input_focus_exited"]
 [connection signal="text_submitted" from="Dock Panel/OpenAI Panel/Presence Penalty Panel/Presence Penalty Input" to="Dock Panel/OpenAI Panel" method="_on_presence_penalty_input_text_submitted"]
 [connection signal="value_changed" from="Dock Panel/OpenAI Panel/Presence Penalty Panel/Presence Penalty Slider" to="Dock Panel/OpenAI Panel" method="_on_presence_penalty_slider_value_changed"]
+[connection signal="focus_exited" from="Dock Panel/Cohere Panel/API Key Panel/API Key Input" to="Dock Panel/Cohere Panel" method="_on_api_key_input_focus_exited"]
+[connection signal="text_submitted" from="Dock Panel/Cohere Panel/API Key Panel/API Key Input" to="Dock Panel/Cohere Panel" method="_on_api_key_input_text_submitted"]
+[connection signal="item_selected" from="Dock Panel/Cohere Panel/Model Panel/Model Dropdown" to="Dock Panel/Cohere Panel" method="_on_model_dropdown_item_selected"]
