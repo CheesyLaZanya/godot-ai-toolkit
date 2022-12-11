@@ -34,5 +34,5 @@ func decrypt_api_key(encrypted_key):
 	var key = get_encryption_key()
 	var key_array = encrypted_key.replace("[", "").replace("]", "").split(",")
 	var api_key = decrypt_data(key, PackedByteArray(Array(key_array)))
-	print("Api key: %s " % api_key)
+	# print("Api key: %s " % api_key)
 	return api_key

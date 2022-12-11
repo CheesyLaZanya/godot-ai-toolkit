@@ -50,7 +50,7 @@ func load_secrets():
 	secrets = ParameterUtility.load_json_data(secrets_file_path)
 	secrets_loaded = true
 
-	print_secrets()
+	# print_secrets()
 
 
 func load_parameters():
