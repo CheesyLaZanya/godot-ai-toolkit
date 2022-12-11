@@ -62,8 +62,10 @@ Godot 4.0 Beta 7 can be found here: [https://godotengine.org/article/dev-snapsho
 git clone https://github.com/zkenshin/godot-ai-toolkit.git
 ```
 
-3. Import the project using the project.godot file found inside the inner godot-ai-toolkit
+3. Create a "secrets" folder inside the path "godot-ai-toolkit\godot-ai-toolkit\addons\ai_toolkit"
 
-4. On the left, use our toolkit to configure an OpenAI api key (and change any desired parameters), and a co:here api key
+4. Import the project using the project.godot file found inside the inner godot-ai-toolkit
 
-5. Run the project and try out the sample visual novel or sample RPG to see a small slice of what AI integration with Godot can look like
+5. On the left, use our toolkit to configure an OpenAI api key (and change any desired parameters), and a co:here api key
+
+6. Run the project and try out the sample visual novel or sample RPG to see a small slice of what AI integration with Godot can look like
