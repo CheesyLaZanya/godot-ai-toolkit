@@ -33,8 +33,19 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
 - [x] Look at collapsible dock sections for different AI/APIs
+- [ ] Make sample RPG Intro
+    - [ ] Ask for name
+        - [ ] Comment on how "fantasy" the name is or isn't?
+    - [ ] Ask for their chosen weapon
+        - [ ] Respond sarcastically about it
+- [ ] Make sample visual novel date
+    - [ ] Where did you go on a date?
+        - [ ] Have open AI describe the date briefly.
+    - [ ] Ask how they enjoyed the date
+        - [ ] Have date respond based on Cohere analysis, use "where" in task description.
+- [ ] Setup example start scene that links to others
+- [ ] Make Co:here API easier to use
 - [ ] Split API key out from other params?
-- [ ] Setup example scene
 - [ ] Code refactor/improvement
 - [ ] Create project icon
 - [ ] Finalize plugin information
