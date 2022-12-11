@@ -2,7 +2,7 @@
 extends Node
 
 var crypto = Crypto.new()
-var key_path = "user://generated.key"
+var key_path = "res://addons/ai_toolkit/secrets/generated.key"
 
 func get_encryption_key():
 	var key = CryptoKey.new()
