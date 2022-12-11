@@ -22,21 +22,31 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Find documentation for calling APIs from Godot
     https://docs.godotengine.org/en/latest/classes/class_httprequest.html
 - [x] Make proof of concept of calling Open AI api
-- [ ] Add the rest of the configurable parameters to the OpenAI section in the dock
-- [ ] Hook dock up to saving API key
-- [ ] Hook up rest of dock saving parameters
+- [x] Add the rest of the configurable parameters to the OpenAI section in the dock
+- [x] Hook dock up to saving API key
+- [x] Hook up rest of dock saving parameters
 - [x] Find documentation on encrypting values in Godot
     https://docs.godotengine.org/en/latest/classes/class_crypto.html
 - [x] Create basic encryption PoC
-- [ ] Generalize encryption helper
-- [ ] Setup encryption for API keys to allow saving them in project without leaking them in git.
+- [x] Generalize encryption helper
+- [x] Setup encryption for API keys to allow saving them in project without leaking them in git.
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
+- [ ] Look at collapsible dock sections for different AI/APIs
+- [ ] Setup example scene
+- [ ] Code refactor/improvement
+- [ ] Create project icon
 - [ ] Finalize plugin information
 - [ ] Create setup instructions
-- [ ] Create usage information/documentations
+- [ ] Create usage information/documentation
 - [ ] Retry plugin autoload or remove commented out autoload code 
-- [ ] TBD ...
+- [ ] Make simple presentation deck
+    - [ ] Team overview
+    - [ ] Problem overview
+    - [ ] Proposed solution
+    - [ ] Next Steps/Learnings/etc. as applicable
+- [ ] Record project demo
+- [ ] Submit on devpost as team
 
 # Ideas
 

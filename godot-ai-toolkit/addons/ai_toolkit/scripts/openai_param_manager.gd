@@ -13,7 +13,7 @@ var parameters = {
 
 var parameters_loaded = false
 
-var parameters_file_path = "res://parameters/openai"
+var parameters_file_path = "res://addons/ai_toolkit/parameters/openai.json"
 
 func _ready():
 	first_time_setup()
