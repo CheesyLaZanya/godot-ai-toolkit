@@ -16,8 +16,8 @@ The goal for this project is to create a toolkit to help interface between Godot
 A plugin for Godot was successfully made to facilitate configuring integrated APIs from within the Godot user interface.
 
 Integrations were completed for the following APIs:
-- co:here (used for semantic analysis). See more at [https://cohere.ai/](co:here's website)
-- OpenAI GPT (used for text generation). See more at [https://openai.com/](OpenAI's website)
+- co:here (used for semantic analysis). See more at [co:here's website](https://cohere.ai/)
+- OpenAI GPT (used for text generation). See more at [OpenAI's website](https://openai.com/)
 
 These were then used in two sample scenes to demonstrate how they can be used in practice for game development.
 
