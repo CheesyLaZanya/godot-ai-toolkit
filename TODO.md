@@ -1,6 +1,7 @@
 # Description
 
-Todo and idea list for our Godot AI Toolkit entry to the Assembly AI 2022 Hackathon
+Todo file for our Godot AI Toolkit entry to the Assembly AI 2022 Hackathon
+
 
 # Todo
 
@@ -33,24 +34,28 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
 - [x] Look at collapsible dock sections for different AI/APIs
-- [ ] Make sample RPG Intro
-    - [ ] Ask for name
-        - [ ] Comment on how "fantasy" the name is or isn't?
-    - [ ] Ask for their chosen weapon
-        - [ ] Respond sarcastically about it
+- [ ] Setup example start scene that links to others
+- [ ] Fix API key decryption after recent changes
 - [ ] Make sample visual novel date
     - [ ] Where did you go on a date?
         - [ ] Have open AI describe the date briefly.
     - [ ] Ask how they enjoyed the date
         - [ ] Have date respond based on Cohere analysis, use "where" in task description.
-- [ ] Setup example start scene that links to others
+- [ ] Make sample RPG Intro
+    - [ ] Ask for name
+        - [ ] Comment on how "fantasy" the name is or isn't?
+    - [ ] Ask for their chosen weapon
+        - [ ] Respond sarcastically about it
+- [ ] Cleanup example start scene that links to others (or remove if only one finished)
+- [ ] Review if we're completing the RPG or not and update our readme if so.
+- [ ] Either fix secret folder starting in the project, or add to instructions to create it.
 - [ ] Make Co:here API easier to use
 - [x] Split API key out from parameters
 - [ ] Code refactor/improvement
-- [ ] Create project icon
+- [x] Create project icon
 - [ ] Finalize plugin information
-- [ ] Create setup instructions
-- [ ] Create usage information/documentation
+- [x] Create setup instructions
+- [x] Create usage information/documentation
 - [ ] Retry plugin autoload or remove commented out autoload code 
 - [ ] Make simple presentation deck
     - [ ] Team overview
@@ -59,15 +64,3 @@ Here are the things we've identified need done to complete this hackathon/projec
     - [ ] Next Steps/Learnings/etc. as applicable
 - [ ] Record project demo
 - [ ] Submit on devpost as team
-
-# Ideas
-
-The goal for this project is to create a framework to help interface between Godot and AI APIs to help game developers create more personalized experiences in an easy way.
-
-## Rough Ideas
-- Ideally make this a Godot plugin
-- Use OpenAI for personalized story interactions?
-- Use Co:here for semantic analyze of answers for more appropriate character reactions?
-- Use Uberduck to allow characters to speak written or generated dialog?
-- Use Assembly AI for easy subtitle creation?
-- Use Stability AI for generating dynamic backdrops or other personalized content?
