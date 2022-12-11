@@ -5,7 +5,6 @@ func _ready():
 	var name = "Bob"
 	send_name_prompt(name)
 	
-	
 	var date_feedback = "I hated this date"
 	send_date_feedback(date_feedback)
 	
@@ -52,8 +51,6 @@ func _get_name_response(status, message):
 
 
 func _get_date_prediction(status, prediction, confidence):
-	if status == OK:
-		print ("Successfully recieved %s" % prediction)
-	else:
-		print("Received status %s" % status)
-		print("With message %s" % prediction)
+	print("Received status %s" % status)
+	print("With message %s" % prediction)
+	print("Confidence %s" % confidence)
