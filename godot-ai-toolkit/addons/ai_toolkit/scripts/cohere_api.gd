@@ -1,20 +1,41 @@
 @tool
 extends Node
 
-func analyze_sentiment(response):
+signal request_completed(status, predicition, confidence)
+
+func analyze_sentiment(feedback, category, positive_examples, neutral_examples, negative_examples):
 	var http_request = create_sentiment_request()
+	
+	var secrets = CohereParamManager.get_secrets()
 	var global_parameters = CohereParamManager.get_parameters()
 	
-	var output_indicator = "Classify this date feedback"
-	var task_description = "Classify this date feedback as positive, negative, or neutral"
+	var output_indicator = "Classify this %s feedback" % category
+	var task_description = "Classify this %s feedback as positive, negative, or neutral" % category
 	
-	var inputs = ["I'm glad we finally had our date."]
-	
-	var positive_examples = []
-	var neutral_examples = []
-	var negative_examples = []
+	var inputs = [feedback]
 	
 	var examples = []
+	
+	for example in positive_examples:
+		var details = {
+			"text": example,
+			"label": "positive %s" % category
+		}
+		examples.append(details)
+		
+	for example in neutral_examples:
+		var details = {
+			"text": example,
+			"label": "neutral %s" % category
+		}
+		examples.append(details)
+		
+	for example in negative_examples:
+		var details = {
+			"text": example,
+			"label": "negative %s" % category
+		}
+		examples.append(details)
 	
 	var body = JSON.new().stringify(
 		{
@@ -25,7 +46,7 @@ func analyze_sentiment(response):
 			"inputs": inputs
 		})
 
-	var cohere_api_key = EncryptionUtility.decrypt_api_key(global_parameters.api_key)
+	var cohere_api_key = EncryptionUtility.decrypt_api_key(secrets.api_key)
 	
 	var headers = ["Content-Type: application/json", "Authorization: Bearer %s" % cohere_api_key]
 
@@ -33,8 +54,8 @@ func analyze_sentiment(response):
 	
 	print("Sending request to %s" % url)
 	
-	# var error = http_request.request(url, headers, true, HTTPClient.METHOD_POST, body)
-	var error = OK
+	var error = http_request.request(url, headers, true, HTTPClient.METHOD_POST, body)
+	# var error = OK
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
@@ -60,7 +81,12 @@ func _analysis_completed(result, response_code, headers, body):
 	var response = json.get_data()
 	
 	if response.has('classifications'):
-		print(response["classifications"][0]["prediction"])
-		print(response["classifications"][0]["confidence"])
+		var prediction = response["classifications"][0]["prediction"]
+		var confidence = float(response["classifications"][0]["confidence"])
+		print(prediction)
+		print(confidence)
+		emit_signal("request_completed", ERR_UNCONFIGURED, prediction, confidence)
 	elif response.has('message'):
-		print(response["message"])
+		var message = response["message"]
+		print(message)
+		emit_signal("request_completed", ERR_UNCONFIGURED, message, 0.0)

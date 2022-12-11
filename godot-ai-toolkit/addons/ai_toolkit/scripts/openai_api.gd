@@ -27,8 +27,8 @@ func send_prompt(prompt):
 	
 	print("Sending request to %s" % url)
 	
-	# var error = http_request.request(url, headers, true, HTTPClient.METHOD_POST, body)
-	var error = OK
+	var error = http_request.request(url, headers, true, HTTPClient.METHOD_POST, body)
+	# var error = OK
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 
@@ -37,7 +37,9 @@ func get_available_models():
 	var available_models = ["ada", "babbage", "curie", "curie-instruct-beta", "davinci", "davinci-instruct-beta", "text-ada-001", "text-babbage-001", "text-curie-001", "text-davinci-001", "text-davinci-002", "text-davinci-003"]
 	
 	return available_models
-	
+
+# Gets too many models& not worth the async cost at this point.
+# func get_available_models():
 	# var http_request = create_model_request()
 	# var global_parameters = OpenAIParamManager.get_parameters()
 	
