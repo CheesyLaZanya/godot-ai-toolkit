@@ -21,7 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_mgeih")
 
 [node name="RPG Panel" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,7 +30,6 @@ grow_vertical = 2
 script = ExtResource("2_lqskd")
 
 [node name="Backdrop Image" type="ColorRect" parent="RPG Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -40,7 +39,6 @@ color = Color(0.815686, 0.815686, 0.815686, 1)
 
 [node name="Story Panel" type="Panel" parent="RPG Panel"]
 self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0192708
 anchor_top = 0.587963
@@ -52,7 +50,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1kvv7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Label" type="Label" parent="RPG Panel/Story Panel"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0126126
 anchor_top = 0.0515873
@@ -65,7 +62,6 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Input" type="LineEdit" parent="RPG Panel/Story Panel"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0124324
 anchor_top = 0.566667
@@ -80,7 +76,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RPG Researcher Image" type="TextureRect" parent="RPG Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.35
 anchor_top = 0.0564815
@@ -94,7 +89,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RPG Weapon Image" type="TextureRect" parent="RPG Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.35
 anchor_top = 0.0564815

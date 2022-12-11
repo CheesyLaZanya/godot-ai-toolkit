@@ -1,6 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://c75p4j2as3kdm"]
+[gd_scene load_steps=10 format=3 uid="uid://c75p4j2as3kdm"]
 
 [ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_loader.gd" id="1_8jgpw"]
+[ext_resource type="Texture2D" uid="uid://byfakxhyo4rgd" path="res://toolkit_icon.png" id="2_8yb8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwau3"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irsak"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m5op"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6sjyl"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfcgw"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7kmc"]
+bg_color = Color(0.113725, 0.113725, 0.113725, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dplte"]
+bg_color = Color(0.294118, 0.294118, 0.294118, 1)
 
 [node name="sample_start" type="Control"]
 layout_mode = 3
@@ -28,12 +50,11 @@ metadata/_edit_use_anchors_ = true
 [node name="TitleLabel" type="Label" parent="SampleScreenPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.310547
-anchor_top = 0.109375
-anchor_right = 0.689453
-anchor_bottom = 0.210938
+anchor_right = 1.0
+anchor_bottom = 0.18426
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxFlat_nwau3")
 text = "Godot AI Toolkit Samples"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -43,7 +64,7 @@ metadata/_edit_use_anchors_ = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.285185
+anchor_top = 0.612964
 anchor_right = 0.495313
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -54,20 +75,26 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.136698
+anchor_top = 0.12201
 anchor_right = 0.861199
-anchor_bottom = 0.965026
+anchor_bottom = 0.796651
+offset_top = 31.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 metadata/_edit_use_anchors_ = true
 
 [node name="RPGSampleButton" type="Button" parent="SampleScreenPanel/ButtonPanel/SampleButtonVBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_irsak")
 text = "RPG Sample"
 
 [node name="VisualNovelSampleButton" type="Button" parent="SampleScreenPanel/ButtonPanel/SampleButtonVBox"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_8m5op")
 text = "Visual Novel Sample"
 
 [node name="RPGDescriptionPanel" type="Panel" parent="SampleScreenPanel"]
@@ -75,40 +102,44 @@ visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.46875
-anchor_top = 0.285185
+anchor_top = 0.239815
 anchor_right = 0.960938
-anchor_bottom = 0.941667
+anchor_bottom = 0.941668
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6sjyl")
 metadata/_edit_use_anchors_ = true
 
 [node name="RPGSelectedSceneLabel" type="Label" parent="SampleScreenPanel/RPGDescriptionPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.209524
-anchor_top = 0.0479549
-anchor_right = 0.779894
-anchor_bottom = 0.12976
+anchor_left = 0.0126984
+anchor_top = 0.0474934
+anchor_right = 0.998942
+anchor_bottom = 0.129288
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "Selected Scene: RPG Sample"
+text = "RPG Sample"
+horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="RPGStartButton" type="Button" parent="SampleScreenPanel/RPGDescriptionPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.455556
-anchor_top = 0.877292
-anchor_right = 0.573016
-anchor_bottom = 0.947814
+anchor_left = 0.322751
+anchor_top = 0.850923
+anchor_right = 0.661376
+anchor_bottom = 0.948549
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_gfcgw")
 text = "  Start  "
 metadata/_edit_use_anchors_ = true
 
 [node name="RPGDescriptionPanel" type="Panel" parent="SampleScreenPanel/RPGDescriptionPanel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0867725
@@ -141,47 +172,45 @@ metadata/_edit_use_anchors_ = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.469271
-anchor_top = 0.315741
-anchor_right = 0.961458
-anchor_bottom = 0.972222
-offset_left = -1.0
-offset_top = -33.0
-offset_right = -1.0
-offset_bottom = -33.0
+anchor_left = 0.46875
+anchor_top = 0.240741
+anchor_right = 0.960938
+anchor_bottom = 0.940742
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7kmc")
 metadata/_edit_use_anchors_ = true
 
 [node name="VisualNovelSelectedSceneLabel" type="Label" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.128042
-anchor_top = 0.0479549
-anchor_right = 0.861376
-anchor_bottom = 0.12976
-offset_left = 77.0
-offset_right = -77.0
+anchor_left = 0.00846561
+anchor_top = 0.0485175
+anchor_right = 1.0
+anchor_bottom = 0.130728
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
-text = "Selected Scene: Visual Novel Sample"
+text = "Visual Novel Sample"
+horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VisualNovelStartButton" type="Button" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.455556
-anchor_top = 0.877292
-anchor_right = 0.573016
-anchor_bottom = 0.947814
+anchor_left = 0.321693
+anchor_top = 0.851752
+anchor_right = 0.662434
+anchor_bottom = 0.950135
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_dplte")
 text = "  Start  "
 metadata/_edit_use_anchors_ = true
 
 [node name="VisualNovelDescriptionPanel" type="Panel" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0867725
@@ -202,7 +231,7 @@ anchor_bottom = 1.02101
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 30
-text = "This scene is a sample of slice from a personalized visual novel
+text = "This scene is a sample slice from a personalized visual novel.
 
 In it, you've just wrapped up a date, and get to talk about it on your way home.
 
@@ -210,6 +239,18 @@ Highlighted Technologies:
 - Using OpenAI's GPT3 to react to player entered information.
 - Using co:here for classifying player entered information to make characters react appropriately."
 metadata/_edit_use_anchors_ = true
+
+[node name="ToolkitIcon" type="TextureRect" parent="SampleScreenPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.130729
+anchor_top = 0.245371
+anchor_right = 0.354688
+anchor_bottom = 0.64352
+offset_top = 31.0
+offset_bottom = 31.0
+texture = ExtResource("2_8yb8h")
+ignore_texture_size = true
 
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/RPGSampleButton" to="." method="_on_rpg_sample_button_button_up"]
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/VisualNovelSampleButton" to="." method="_on_visual_novel_sample_button_button_up"]

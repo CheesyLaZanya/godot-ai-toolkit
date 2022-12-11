@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/ai_selection.gd" id="1_uvxuy"]
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/cohere_configuration.gd" id="3_ks8o7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksjqw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hdt2"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sdst"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia6nk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxoab"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cxst"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -36,7 +36,7 @@ anchor_top = 0.00925926
 anchor_right = 0.979021
 anchor_bottom = 0.0601852
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ksjqw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6hdt2")
 metadata/_edit_use_anchors_ = true
 
 [node name="AI Selection" type="OptionButton" parent="Dock Panel/AI Selection Panel"]
@@ -46,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_0sdst")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ia6nk")
 alignment = 1
 expand_icon = true
 item_count = 3
@@ -96,7 +96,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "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"
 alignment = 1
 secret = true
@@ -132,7 +132,7 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 alignment = 1
 item_count = 12
 selected = 11
@@ -193,7 +193,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "0.7"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -240,7 +240,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "256"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -287,7 +287,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "1"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -334,7 +334,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -380,7 +380,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -433,7 +433,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 text = "bf51ysneGWYXnsTHasosTYp3ZMsz1OTWVhnsUg6h"
 alignment = 1
 secret = true
@@ -466,7 +466,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_hxoab")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cxst")
 alignment = 1
 item_count = 3
 selected = 1
