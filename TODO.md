@@ -45,7 +45,7 @@ Here are the things we've identified need done to complete this hackathon/projec
         - [ ] Have date respond based on Cohere analysis, use "where" in task description.
 - [ ] Setup example start scene that links to others
 - [ ] Make Co:here API easier to use
-- [ ] Split API key out from other params?
+- [x] Split API key out from parameters
 - [ ] Code refactor/improvement
 - [ ] Create project icon
 - [ ] Finalize plugin information
