@@ -34,7 +34,6 @@ func _ready():
 
 
 func load_configuration_values():
-	OpenAIParamManager.load_parameters()
 	var openai_global_parameters = OpenAIParamManager.get_parameters()
 	
 	api_key_input_node.text = OpenAIAPI.decrypt_api_key(openai_global_parameters)

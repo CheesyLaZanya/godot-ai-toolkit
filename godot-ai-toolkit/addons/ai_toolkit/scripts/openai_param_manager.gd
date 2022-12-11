@@ -11,12 +11,17 @@ var parameters = {
 	presence_penalty = 0
 }
 
+var parameters_loaded = false
+
 var parameters_file_path = "res://parameters/openai"
 
 func _ready():
+	first_time_setup()
+
+func first_time_setup():
 	if not FileAccess.file_exists(parameters_file_path):
 		save_parameters()
-
+		parameters_loaded = true
 
 func save_parameters():
 	var parameters_json = JSON.new().stringify(parameters, "\t")
@@ -34,16 +39,21 @@ func load_parameters():
 	var status = json_parser.parse(file_contents)
 	
 	parameters = json_parser.get_data()
+	
+	parameters_loaded = true
 
 	print_parameters()
 
 
 func get_parameters():
+	if parameters_loaded == false:
+		load_parameters()
+	
 	return parameters
 
 
 func print_parameters():
-	print("api_key: %s" % parameters.api_key)
+	print("encrypted api_key: %s" % parameters.api_key)
 	print("gpt_model: %s" % parameters.gpt_model)
 	print("temperature: %s" % parameters.temperature)
 	print("max_tokens: %s" % parameters.max_tokens)
