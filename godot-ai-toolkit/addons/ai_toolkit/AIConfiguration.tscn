@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://pqba50d0p74n"]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
 [ext_resource type="Script" path="res://addons/ai_toolkit/ai_selection.gd" id="1_uvxuy"]
-[ext_resource type="Script" path="res://addons/ai_toolkit/cohere_configuration.gd" id="3_08jya"]
+[ext_resource type="Script" path="res://addons/ai_toolkit/scripts/cohere_configuration.gd" id="3_08jya"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmqpb"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)

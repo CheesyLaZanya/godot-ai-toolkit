@@ -15,9 +15,10 @@ func _ready():
 
 
 func load_configuration_values():
+	var cohere_secrets = CohereParamManager.get_secrets()
 	var cohere_global_parameters = CohereParamManager.get_parameters()
 	
-	api_key_input_node.text = EncryptionUtility.decrypt_api_key(cohere_global_parameters.api_key)
+	api_key_input_node.text = EncryptionUtility.decrypt_api_key(cohere_secrets.api_key)
 	
 	var models = CohereAPI.get_available_models()
 	var model_input_index = models.find(cohere_global_parameters.model, 0)
