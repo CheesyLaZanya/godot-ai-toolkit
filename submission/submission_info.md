@@ -68,4 +68,4 @@ https://github.com/zkenshin/godot-ai-toolkit
 
 # Video demo link
 
-TBD
+https://youtu.be/PxUpEXs7BpM
