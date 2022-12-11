@@ -1,0 +1,92 @@
+[
+    {
+        "dialog": "You've just wrapped up your date for the evening.",
+        "input": false,
+        "id": 0
+    },
+    {
+        "dialog": "Where did you go on a date?",
+        "input": true,
+        "id": 1
+    },
+    {
+        "dialog": "You're currently walking your date home.",
+        "input": false,
+        "id": 2
+    },
+    {
+        "dialog": "You catch yourself thinking back on your date.",
+        "input": false,
+        "id": 3
+    },
+    {
+        "dialog": "Ah, the %s.",
+        "input": false,
+        "id": 4
+    },
+    {
+        "dialog": "%s",
+        "input": false,
+        "id": 5
+    },
+    {
+        "dialog": "\"What are you so deep in thought about?\", you hear from your right.",
+        "input": false,
+        "id": 6
+    },
+    {
+        "dialog": "Snapping back to reality, you look at your date.",
+        "input": false,
+        "id": 7
+    },
+    {
+        "dialog": "\"Oh uh, just thinking back on our date.\"",
+        "input": false,
+        "id": 8
+    },
+    {
+        "dialog": "\"Oh I was just thinking about that too!\"",
+        "input": false,
+        "id": 9
+    },
+    {
+        "dialog": "\"Oh I was just thinking about that too!\"",
+        "input": false,
+        "id": 10
+    },
+    {
+        "dialog": "\"How did you feel about our day today?\"",
+        "input": true,
+        "id": 11
+    },
+    {
+        "dialog": "After you finish speaking, you feel a bit awkward as you're not quite sure if she feels the same way.",
+        "input": false,
+        "id": 12
+    },
+    {
+        "dialog": "\"%s?\" she repeats softly . . .",
+        "input": false,
+        "id": 13
+    },
+    {
+        "dialog": "\"Oh I'm so glad you feel the same way! I had a great time!\" she says as a big grin spreads across her face.",
+        "input": false,
+        "id": 14
+    },
+    {
+        "dialog": "\"Oh, I'm sorry you didn't have a great time. Maybe we can do something else next time.\" she says.",
+        "input": false,
+        "id": 15
+    },
+    {
+        "dialog": "\"Oh . . .\" she says, as tears begin to well up in her eyes. \"I had a good time today, but I guess you didn't feel the same way.\"",
+        "input": false,
+        "id": 16
+    },
+    {
+        "dialog": "You continue walking along until you arrive at her place, and say goodnight as she heads inside.",
+        "input": false,
+        "id": 17
+    }
+]

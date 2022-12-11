@@ -12,7 +12,7 @@
 
 [AI] {Describe a bit about the date/location}
 
-[TEXT] "What are you so deep in thought about?", you hear.
+[TEXT] "What are you so deep in thought about?", you hear from your right.
 
 [TEXT] Snapping back to reality, you look at your date.
 
@@ -34,7 +34,7 @@
 
 [IF-NEUTRAL] "Oh, I'm sorry you didn't have a great time. Maybe we can do something else next time." she says.
 
-[IF-NEGATIVE] "Oh ..." she says, as tears begin to well up in her eyes. "I had a good time today, but I guess you didn't feel the same way."
+[IF-NEGATIVE] "Oh . . ." she says, as tears begin to well up in her eyes. "I had a good time today, but I guess you didn't feel the same way."
 
 [TEXT] You continue walking along until you arrive at her place, and say goodnight as she heads inside.
 

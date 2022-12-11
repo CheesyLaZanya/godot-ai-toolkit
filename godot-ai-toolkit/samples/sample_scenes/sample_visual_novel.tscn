@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmpsaw8ecsd3c"]
+[gd_scene load_steps=6 format=3 uid="uid://dmpsaw8ecsd3c"]
 
+[ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_visual_novel.gd" id="1_3ansm"]
 [ext_resource type="Texture2D" uid="uid://de22plrqgwmr3" path="res://samples/sample_assets/sample_visual_novel/date_backdrop.png" id="1_knrlv"]
 [ext_resource type="Texture2D" uid="uid://cmh1bivalacuc" path="res://samples/sample_assets/sample_visual_novel/date_default.png" id="2_7am6s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kvv7"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5juy"]
+bg_color = Color(0.211765, 0.207843, 0.215686, 0.984314)
 
 [node name="sample_visual_novel" type="Control"]
 layout_mode = 3
@@ -21,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3ansm")
 
 [node name="Backdrop Image" type="TextureRect" parent="Novel Panel"]
 layout_mode = 1
@@ -45,7 +50,7 @@ grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1kvv7")
 metadata/_edit_use_anchors_ = true
 
-[node name="Story Text" type="Label" parent="Novel Panel/Story Panel"]
+[node name="Story Text Label" type="Label" parent="Novel Panel/Story Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0126126
@@ -55,9 +60,25 @@ anchor_bottom = 0.551587
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
 text = "Some story text here."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Story Text Input" type="LineEdit" parent="Novel Panel/Story Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0124324
+anchor_top = 0.566667
+anchor_right = 0.989189
+anchor_bottom = 0.892857
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5juy")
+alignment = 1
+caret_blink = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Date Image" type="TextureRect" parent="Novel Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394792
@@ -69,3 +90,5 @@ grow_vertical = 2
 texture = ExtResource("2_7am6s")
 ignore_texture_size = true
 metadata/_edit_use_anchors_ = true
+
+[connection signal="text_submitted" from="Novel Panel/Story Panel/Story Text Input" to="Novel Panel" method="_on_story_text_input_text_submitted"]
