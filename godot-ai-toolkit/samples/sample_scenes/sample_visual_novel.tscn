@@ -67,6 +67,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Input" type="LineEdit" parent="Novel Panel/Story Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0124324

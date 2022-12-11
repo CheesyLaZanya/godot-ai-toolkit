@@ -21,15 +21,20 @@ func _ready():
 	date_image_negative = $"Date Image Negative"
 	
 	date_script = ParameterUtility.load_json_data(date_script_file)
-	update_story_panel()
+	get_current_story()
 
 func _input(ev):
 	if Input.is_key_pressed(KEY_ENTER):
-		if (date_script[story_progress - 1].input == false):
+		if (date_script[story_progress].input == false):
 			update_story_panel()
 
+func get_id_from_tag(tag):
+	for story_section in date_script:
+		if story_section.has("tag"):
+			if story_section.tag == tag:
+				return story_section.id
 
-func update_story_panel():
+func get_current_story():
 	var updated_story = date_script[story_progress].dialog
 	updated_story = updated_story.replace("[[USER_INPUT]]", user_input)
 	updated_story = updated_story.replace("[[AI_INPUT]]", ai_input)
@@ -40,38 +45,106 @@ func update_story_panel():
 		story_text_input.show()
 	else:
 		story_text_input.hide()
+		
+	var appearance_id = get_id_from_tag("appearance")
 	
-	if date_script[story_progress].id == 6:
+	if date_script[story_progress].id == appearance_id:
 		date_image_base.show()
+
+
+func update_story_panel():
+	var result_id = get_id_from_tag("result")
 	
-	if date_script[story_progress].id == 13:
+	if date_script[story_progress].id > result_id:
+		var end_id = get_id_from_tag("ending")
+		story_progress = end_id
+	elif date_script[story_progress].id == result_id:
 		set_response_based_on_feeling("negative date")
-	
-	if date_script[story_progress].id >= 14:
-		story_progress = 17
 	else:
 		story_progress = story_progress + 1
+		
+	get_current_story()
 
 
 func set_response_based_on_feeling(feeling):
 	date_image_base.hide()
 	
+	var response_id = get_id_from_tag(feeling)
+	
 	if feeling == "positive date":
 		date_image_positive.show()
-		story_progress = 14
+		story_progress = response_id
 	elif feeling == "negative date":
 		date_image_negative.show()
-		story_progress = 16
+		story_progress = response_id
 	else:
+		response_id = get_id_from_tag("neutral date")
 		date_image_neutral.show()
-		story_progress = 15
+		story_progress = response_id
 	
-	update_story_panel()
+	get_current_story()
 
 func _on_story_text_input_text_submitted(new_text):
 	user_input = new_text
 	story_text_input.text = ""
 	
+	var date_location_id = get_id_from_tag("date location")
+	var date_feedback_id = get_id_from_tag("date feedback")
+	
+	if date_script[story_progress].id == date_location_id:
+		print("That was date location info")
+	elif date_script[story_progress].id == date_feedback_id:
+		print("That was date feedback info")
+	else:
+		printerr("Unknown input. ID was %s" % date_script[story_progress].id)
+	
 	# send AI user input here
 	
 	update_story_panel()
+
+
+func send_date_prompt(name):
+	var prompt = "The following is a short commentary on a couple going to the '%s' for a date in a visual novel: " % name
+
+	OpenAIAPI.request_completed.connect(_get_date_response)
+	OpenAIAPI.send_prompt(prompt)
+
+
+func _get_date_response(status, message):
+	if status == OK:
+		print ("Successfully recieved %s" % message)
+	else:
+		print("Received status %s" % status)
+		print("With message %s" % message)
+
+
+func send_date_feedback(date_feedback):
+	var category = "date"
+	
+	var positive_examples = [
+		"This date was great",
+		"I had a lot of fun",
+		"I liked it a lot",
+		"I'm glad we had it"
+	]
+	var neutral_examples = [
+		"It was fine",
+		"Whatever",
+		"Eh",
+		"That was a long day"
+	]
+	var negative_examples = [
+		"You were so boring",
+		"Go away",
+		"This date was so dumb",
+		"I'm happy it is over"
+	]
+	
+	CohereAPI.request_completed.connect(_get_date_prediction)
+	CohereAPI.analyze_sentiment(date_feedback, category, positive_examples, neutral_examples, negative_examples)
+
+
+func _get_date_prediction(status, prediction, confidence):
+	print("Received status %s" % status)
+	print("With message %s" % prediction)
+	print("Confidence %s" % confidence)

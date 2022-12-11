@@ -7,7 +7,8 @@
     {
         "dialog": "Where did you go on your date?",
         "input": true,
-        "id": 1
+        "id": 1,
+        "tag": "date location"
     },
     {
         "dialog": "You're currently walking your date home.",
@@ -32,7 +33,8 @@
     {
         "dialog": "\"What are you so deep in thought about?\" you hear from your right.",
         "input": false,
-        "id": 6
+        "id": 6,
+        "tag": "appearance"
     },
     {
         "dialog": "Snapping back to reality, you look at your date.",
@@ -50,43 +52,44 @@
         "id": 9
     },
     {
-        "dialog": "\"Oh I was just thinking about that too!\"",
-        "input": false,
-        "id": 10
-    },
-    {
         "dialog": "\"How did you feel about our day today?\"",
         "input": true,
-        "id": 11
+        "id": 10,
+        "tag": "date feedback"
     },
     {
         "dialog": "After you finish speaking, you feel a bit awkward as you're not quite sure if she feels the same way.",
         "input": false,
-        "id": 12
+        "id": 11
     },
     {
         "dialog": "\"[[USER_INPUT]]?\" she repeats softly . . .",
         "input": false,
-        "id": 13
+        "id": 12,
+        "tag": "result"
     },
     {
         "dialog": "\"Oh I'm so glad you feel the same way! I had a great time!\" she says as a big grin spreads across her face.",
         "input": false,
-        "id": 14
+        "id": 13,
+        "tag": "positive date"
     },
     {
         "dialog": "\"Oh, I'm sorry you didn't have a great time. Maybe we can do something else next time.\" she says.",
         "input": false,
-        "id": 15
+        "id": 14,
+        "tag": "neutral date"
     },
     {
         "dialog": "\"Oh . . .\" she says, as tears begin to well up in her eyes. \"I had a good time today, but I guess you didn't feel the same way.\"",
         "input": false,
-        "id": 16
+        "id": 15,
+        "tag": "negative date"
     },
     {
         "dialog": "You continue walking along until you arrive at her place, and say goodnight as she heads inside.",
         "input": false,
-        "id": 17
+        "id": 16,
+        "tag": "ending"
     }
 ]
