@@ -33,7 +33,7 @@ anchor_top = 0.109375
 anchor_right = 0.689453
 anchor_bottom = 0.210938
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 55
 text = "Godot AI Toolkit Samples"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -70,7 +70,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Visual Novel Sample"
 
-[node name="DescriptionPanel" type="Panel" parent="SampleScreenPanel"]
+[node name="RPGDescriptionPanel" type="Panel" parent="SampleScreenPanel"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.46875
@@ -81,5 +82,136 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="RPGSelectedSceneLabel" type="Label" parent="SampleScreenPanel/RPGDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.209524
+anchor_top = 0.0479549
+anchor_right = 0.779894
+anchor_bottom = 0.12976
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Selected Scene: RPG Sample"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RPGStartButton" type="Button" parent="SampleScreenPanel/RPGDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.455556
+anchor_top = 0.877292
+anchor_right = 0.573016
+anchor_bottom = 0.947814
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "  Start  "
+metadata/_edit_use_anchors_ = true
+
+[node name="RPGDescriptionPanel" type="Panel" parent="SampleScreenPanel/RPGDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0867725
+anchor_top = 0.166432
+anchor_right = 0.916402
+anchor_bottom = 0.8378
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RPGRichTextLabel" type="RichTextLabel" parent="SampleScreenPanel/RPGDescriptionPanel/RPGDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0216837
+anchor_top = 0.0210084
+anchor_right = 1.02168
+anchor_bottom = 1.02101
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "This scene is a sample of an introduction to a new state of the art RPG called FantasAI.
+
+In it, you meet the researcher who will guide you on your journey to save the world.
+
+Highlighted Technologies:
+- Using OpenAI's GPT3 to react to player entered information."
+metadata/_edit_use_anchors_ = true
+
+[node name="VisualNovelDescriptionPanel" type="Panel" parent="SampleScreenPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.469271
+anchor_top = 0.315741
+anchor_right = 0.961458
+anchor_bottom = 0.972222
+offset_left = -1.0
+offset_top = -33.0
+offset_right = -1.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VisualNovelSelectedSceneLabel" type="Label" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128042
+anchor_top = 0.0479549
+anchor_right = 0.861376
+anchor_bottom = 0.12976
+offset_left = 77.0
+offset_right = -77.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Selected Scene: Visual Novel Sample"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VisualNovelStartButton" type="Button" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.455556
+anchor_top = 0.877292
+anchor_right = 0.573016
+anchor_bottom = 0.947814
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "  Start  "
+metadata/_edit_use_anchors_ = true
+
+[node name="VisualNovelDescriptionPanel" type="Panel" parent="SampleScreenPanel/VisualNovelDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0867725
+anchor_top = 0.166432
+anchor_right = 0.916402
+anchor_bottom = 0.8378
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VisualNovelRichTextLabel" type="RichTextLabel" parent="SampleScreenPanel/VisualNovelDescriptionPanel/VisualNovelDescriptionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0216837
+anchor_top = 0.0210084
+anchor_right = 1.02168
+anchor_bottom = 1.02101
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
+text = "This scene is a sample of slice from a personalized visual novel
+
+In it, you've just wrapped up a date, and get to talk about it on your way home.
+
+Highlighted Technologies:
+- Using OpenAI's GPT3 to react to player entered information.
+- Using co:here for classifying player entered information to make characters react appropriately."
+metadata/_edit_use_anchors_ = true
+
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/RPGSampleButton" to="." method="_on_rpg_sample_button_button_up"]
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/VisualNovelSampleButton" to="." method="_on_visual_novel_sample_button_button_up"]
+[connection signal="button_up" from="SampleScreenPanel/RPGDescriptionPanel/RPGStartButton" to="." method="_on_rpg_start_button_up"]
+[connection signal="button_up" from="SampleScreenPanel/VisualNovelDescriptionPanel/VisualNovelStartButton" to="." method="_on_visual_novel_start_button_up"]
