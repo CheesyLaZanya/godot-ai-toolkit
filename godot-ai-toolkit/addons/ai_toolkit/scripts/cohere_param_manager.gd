@@ -21,7 +21,7 @@ func _ready():
 
 func first_time_setup():
 	if not FileAccess.file_exists(secrets_file_path):
-		save_secrets()
+		set_api_key("Secret")
 		secrets_loaded = true
 	if not FileAccess.file_exists(parameters_file_path):
 		save_parameters()
