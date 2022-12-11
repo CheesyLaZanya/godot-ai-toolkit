@@ -12,11 +12,11 @@ func send_prompt(prompt):
 		{
 			"model": global_parameters.gpt_model,
 			"prompt": prompt,
-			"temperature": global_parameters.temperature,
-			"max_tokens": global_parameters.max_tokens,
-			"top_p": global_parameters.top_p,
-			"frequency_penalty": global_parameters.frequency_penalty,
-			"presence_penalty": global_parameters.presence_penalty
+			"temperature": float(global_parameters.temperature),
+			"max_tokens": int(global_parameters.max_tokens),
+			"top_p": float(global_parameters.top_p),
+			"frequency_penalty": float(global_parameters.frequency_penalty),
+			"presence_penalty": float(global_parameters.presence_penalty)
 		})
 
 	var open_ai_api_key = EncryptionUtility.decrypt_api_key(secrets.api_key)

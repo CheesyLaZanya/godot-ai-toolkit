@@ -1,7 +1,7 @@
 extends Node
 
 var user_input = ""
-var ai_input = "AI input here"
+var ai_input = ""
 var date_script
 var date_script_file = "res://samples/sample_assets/sample_visual_novel/date.json"
 var story_progress = 0
@@ -38,6 +38,7 @@ func get_current_story():
 	var updated_story = date_script[story_progress].dialog
 	updated_story = updated_story.replace("[[USER_INPUT]]", user_input)
 	updated_story = updated_story.replace("[[AI_INPUT]]", ai_input)
+	updated_story = updated_story.strip_edges()
 	
 	story_text_label.text = updated_story
 	
@@ -59,7 +60,7 @@ func update_story_panel():
 		var end_id = get_id_from_tag("ending")
 		story_progress = end_id
 	elif date_script[story_progress].id == result_id:
-		set_response_based_on_feeling("negative date")
+		set_response_based_on_feeling(ai_input)
 	else:
 		story_progress = story_progress + 1
 		
@@ -93,18 +94,18 @@ func _on_story_text_input_text_submitted(new_text):
 	
 	if date_script[story_progress].id == date_location_id:
 		print("That was date location info")
+		send_date_prompt(user_input)
 	elif date_script[story_progress].id == date_feedback_id:
 		print("That was date feedback info")
+		send_date_feedback(user_input)
 	else:
 		printerr("Unknown input. ID was %s" % date_script[story_progress].id)
-	
-	# send AI user input here
 	
 	update_story_panel()
 
 
-func send_date_prompt(name):
-	var prompt = "The following is a short commentary on a couple going to the '%s' for a date in a visual novel: " % name
+func send_date_prompt(location):
+	var prompt = "The following is a single line comment on us going to the '%s' for a date in the past in a visual novel including something they saw in a first person perspective: " % location
 
 	OpenAIAPI.request_completed.connect(_get_date_response)
 	OpenAIAPI.send_prompt(prompt)
@@ -113,6 +114,7 @@ func send_date_prompt(name):
 func _get_date_response(status, message):
 	if status == OK:
 		print ("Successfully recieved %s" % message)
+		ai_input = message.replace('"', "")
 	else:
 		print("Received status %s" % status)
 		print("With message %s" % message)
@@ -125,7 +127,8 @@ func send_date_feedback(date_feedback):
 		"This date was great",
 		"I had a lot of fun",
 		"I liked it a lot",
-		"I'm glad we had it"
+		"I'm glad we had it",
+		"Great"
 	]
 	var neutral_examples = [
 		"It was fine",
@@ -137,7 +140,8 @@ func send_date_feedback(date_feedback):
 		"You were so boring",
 		"Go away",
 		"This date was so dumb",
-		"I'm happy it is over"
+		"I'm happy it is over",
+		"Awful"
 	]
 	
 	CohereAPI.request_completed.connect(_get_date_prediction)
@@ -148,3 +152,5 @@ func _get_date_prediction(status, prediction, confidence):
 	print("Received status %s" % status)
 	print("With message %s" % prediction)
 	print("Confidence %s" % confidence)
+	
+	ai_input = prediction
