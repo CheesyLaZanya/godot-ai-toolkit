@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/ai_selection.gd" id="1_uvxuy"]
-[ext_resource type="Script" path="res://addons/ai_toolkit/cohere_configuration.gd" id="3_08jya"]
+[ext_resource type="Script" path="res://addons/ai_toolkit/scripts/cohere_configuration.gd" id="3_ks8o7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqowa"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oq1wv"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltdgw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00der"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pps2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nq85"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -22,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Dock Panel" type="Panel" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,23 +31,25 @@ grow_vertical = 2
 script = ExtResource("1_uvxuy")
 
 [node name="AI Selection Panel" type="Panel" parent="Dock Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020979
 anchor_top = 0.00925926
 anchor_right = 0.979021
 anchor_bottom = 0.0601852
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xqowa")
+theme_override_styles/panel = SubResource("StyleBoxFlat_oq1wv")
 metadata/_edit_use_anchors_ = true
 
 [node name="AI Selection" type="OptionButton" parent="Dock Panel/AI Selection Panel"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_ltdgw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_00der")
 alignment = 1
 expand_icon = true
 item_count = 3
@@ -61,6 +64,7 @@ popup/item_2/id = 2
 
 [node name="OpenAI Panel" type="Panel" parent="Dock Panel"]
 visible = false
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020979
 anchor_top = 0.066358
@@ -70,6 +74,7 @@ script = ExtResource("1_pfuy8")
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.00157977
 anchor_right = 1.0
@@ -78,6 +83,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Label" type="Label" parent="Dock Panel/OpenAI Panel/API Key Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.530612
@@ -90,18 +96,21 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/API Key Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.530612
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
+text = "Secret"
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
 
 [node name="GPT Model Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.0837281
 anchor_right = 1.0
@@ -110,6 +119,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="GPT Model Label" type="Label" parent="Dock Panel/OpenAI Panel/GPT Model Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -125,16 +135,17 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="GPT Model Dropdown" type="OptionButton" parent="Dock Panel/OpenAI Panel/GPT Model Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489795
 anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 alignment = 1
 item_count = 12
-selected = 0
+selected = 11
 fit_to_longest_item = false
 popup/item_0/text = "ada"
 popup/item_0/id = 0
@@ -163,6 +174,7 @@ popup/item_11/id = 11
 metadata/_edit_use_anchors_ = true
 
 [node name="Temperature Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.165877
 anchor_right = 1.0
@@ -171,6 +183,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Temperature Label" type="Label" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -185,6 +198,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Temperature Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.69708
 anchor_top = 0.489797
@@ -192,12 +206,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 text = "0.7"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Temperature Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Temperature Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489797
 anchor_right = 0.645985
@@ -210,6 +225,7 @@ value = 0.7
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.249605
 anchor_right = 1.0
@@ -218,6 +234,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Label" type="Label" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -232,6 +249,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.69708
 anchor_top = 0.489797
@@ -239,12 +257,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 text = "256"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Max Tokens Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489797
 anchor_right = 0.645985
@@ -257,6 +276,7 @@ value = 256.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.333334
 anchor_right = 1.0
@@ -265,6 +285,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Label" type="Label" parent="Dock Panel/OpenAI Panel/Top P Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -279,6 +300,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Top P Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.69708
 anchor_top = 0.489797
@@ -286,12 +308,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 text = "1"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Top P Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489797
 anchor_right = 0.645985
@@ -304,6 +327,7 @@ value = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.417062
 anchor_right = 1.0
@@ -312,6 +336,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Label" type="Label" parent="Dock Panel/OpenAI Panel/Frequency Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -326,6 +351,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Frequency Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.69708
 anchor_top = 0.489797
@@ -333,12 +359,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Frequency Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489797
 anchor_right = 0.645985
@@ -350,6 +377,7 @@ step = 0.01
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.50079
 anchor_right = 1.0
@@ -358,6 +386,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Label" type="Label" parent="Dock Panel/OpenAI Panel/Presence Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0204081
 anchor_right = 1.0
@@ -372,6 +401,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Input" type="LineEdit" parent="Dock Panel/OpenAI Panel/Presence Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.69708
 anchor_top = 0.489797
@@ -379,12 +409,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Slider" type="HSlider" parent="Dock Panel/OpenAI Panel/Presence Penalty Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.489797
 anchor_right = 0.645985
@@ -397,15 +428,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Cohere Panel" type="Panel" parent="Dock Panel"]
 visible = false
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020979
 anchor_top = 0.066358
 anchor_right = 0.979021
 anchor_bottom = 1.04321
-script = ExtResource("3_08jya")
+script = ExtResource("3_ks8o7")
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Panel" type="Panel" parent="Dock Panel/Cohere Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.00157977
 anchor_right = 1.0
@@ -414,6 +447,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Label" type="Label" parent="Dock Panel/Cohere Panel/API Key Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.530612
@@ -426,18 +460,20 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="API Key Input" type="LineEdit" parent="Dock Panel/Cohere Panel/API Key Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.530612
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Model Panel" type="Panel" parent="Dock Panel/Cohere Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.085308
 anchor_right = 1.0
@@ -446,6 +482,7 @@ grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Model Label" type="Label" parent="Dock Panel/Cohere Panel/Model Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.530612
@@ -458,13 +495,14 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Model Dropdown" type="OptionButton" parent="Dock Panel/Cohere Panel/Model Panel"]
+layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.530612
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6pps2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nq85")
 alignment = 1
 item_count = 3
 selected = 2
