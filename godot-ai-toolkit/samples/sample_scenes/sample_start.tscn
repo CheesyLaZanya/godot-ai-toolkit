@@ -5,3 +5,57 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -39.0
+offset_right = 1.0
+offset_bottom = -39.0
+
+[node name="SampleScreenPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277778
+anchor_top = 0.302469
+anchor_right = 0.722222
+anchor_bottom = 0.697531
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="SampleScreenPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.310547
+anchor_top = 0.109375
+anchor_right = 0.689453
+anchor_bottom = 0.210938
+grow_horizontal = 2
+text = "Godot AI Toolkit Samples"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonPanel" type="Panel" parent="SampleScreenPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.285156
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SampleButtonVBox" type="VBoxContainer" parent="SampleScreenPanel/ButtonPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.257813
+anchor_right = 0.726563
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RPGSampleButton" type="Button" parent="SampleScreenPanel/ButtonPanel/SampleButtonVBox"]
+layout_mode = 2
+text = "RPG Sample"
+
+[node name="VisualNovelSampleButton" type="Button" parent="SampleScreenPanel/ButtonPanel/SampleButtonVBox"]
+layout_mode = 2
+text = "Visual Novel Sample"

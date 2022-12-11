@@ -17,9 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-OpenAIParamManager="*res://addons/ai_toolkit/scripts/openai_param_manager.gd"
 EncryptionUtility="*res://addons/ai_toolkit/scripts/encryption_utility.gd"
+OpenAIParamManager="*res://addons/ai_toolkit/scripts/openai_param_manager.gd"
 OpenAIAPI="*res://addons/ai_toolkit/scripts/openai_api.gd"
+CohereParamManager="*res://addons/ai_toolkit/scripts/cohere_param_manager.gd"
+CohereAPI="*res://addons/ai_toolkit/scripts/cohere_api.gd"
 
 [editor_plugins]
 

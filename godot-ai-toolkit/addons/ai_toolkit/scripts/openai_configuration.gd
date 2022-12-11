@@ -36,7 +36,7 @@ func _ready():
 func load_configuration_values():
 	var openai_global_parameters = OpenAIParamManager.get_parameters()
 	
-	api_key_input_node.text = OpenAIAPI.decrypt_api_key(openai_global_parameters)
+	api_key_input_node.text = EncryptionUtility.decrypt_api_key(openai_global_parameters.api_key)
 	
 	var models = OpenAIAPI.get_available_models()
 	var gpt_model_input_index = models.find(openai_global_parameters.gpt_model, 0)

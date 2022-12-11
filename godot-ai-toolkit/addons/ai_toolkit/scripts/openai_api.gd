@@ -23,7 +23,7 @@ func send_prompt(prompt):
 			"presence_penalty": global_parameters.presence_penalty
 		})
 
-	var open_ai_api_key = decrypt_api_key(global_parameters)
+	var open_ai_api_key = EncryptionUtility.decrypt_api_key(global_parameters.api_key)
 
 	var headers = ["Content-Type: application/json", "Authorization: Bearer %s" % open_ai_api_key]
 
@@ -38,7 +38,6 @@ func send_prompt(prompt):
 
 
 func get_available_models():
-	
 	var available_models = ["ada", "babbage", "curie", "curie-instruct-beta", "davinci", "davinci-instruct-beta", "text-ada-001", "text-babbage-001", "text-curie-001", "text-davinci-001", "text-davinci-002", "text-davinci-003"]
 	
 	return available_models
@@ -58,15 +57,6 @@ func get_available_models():
 	# var error = OK
 	# if error != OK:
 		# push_error("An error occurred in the HTTP request.")
-
-
-func decrypt_api_key(global_parameters):
-	var key = EncryptionUtility.get_encryption_key()
-	var encrypted_key = global_parameters.api_key
-	var key_array = encrypted_key.replace("[", "").replace("]", "").split(",")
-	var open_ai_api_key = EncryptionUtility.decrypt_data(key, PackedByteArray(Array(key_array)))
-	print("Api key: %s " % open_ai_api_key)
-	return open_ai_api_key
 
 
 # Note: Don't make simultaneous requests using a single HTTPRequest node.
