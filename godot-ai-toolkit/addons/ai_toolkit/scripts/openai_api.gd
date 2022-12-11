@@ -1,15 +1,11 @@
 @tool
 extends Node
 
-# func _ready():
-# 	var name = "Bob"
-# 	var prompt = "The following is a short commentary on a player naming themselves '%s' in a romantic visual novel: " % name
-
-# 	send_prompt(prompt)
-
+signal request_completed(status, message)
 
 func send_prompt(prompt):
 	var http_request = create_prompt_request()
+	var secrets = OpenAIParamManager.get_secrets()
 	var global_parameters = OpenAIParamManager.get_parameters()
 	
 	var body = JSON.new().stringify(
@@ -23,7 +19,7 @@ func send_prompt(prompt):
 			"presence_penalty": global_parameters.presence_penalty
 		})
 
-	var open_ai_api_key = EncryptionUtility.decrypt_api_key(global_parameters.api_key)
+	var open_ai_api_key = EncryptionUtility.decrypt_api_key(secrets.api_key)
 
 	var headers = ["Content-Type: application/json", "Authorization: Bearer %s" % open_ai_api_key]
 
@@ -74,9 +70,13 @@ func _prompt_completed(result, response_code, headers, body):
 	var response = json.get_data()
 	
 	if response.has('error'):
-		print(response["error"]["message"])
+		var message = response["error"]["message"]
+		print(message)
+		emit_signal("request_completed", ERR_UNCONFIGURED, message)
 	if response.has('choices'):
-		print(response["choices"][0]["text"])
+		var message = response["choices"][0]["text"]
+		print(message)
+		emit_signal("request_completed", OK, message)
 		
 
 # func create_model_request():

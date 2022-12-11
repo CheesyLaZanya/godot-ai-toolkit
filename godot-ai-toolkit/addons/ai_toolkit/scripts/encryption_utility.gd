@@ -31,8 +31,8 @@ func decrypt_data(key, encrypted_data):
 
 
 func decrypt_api_key(encrypted_key):
-	var key = EncryptionUtility.get_encryption_key()
+	var key = get_encryption_key()
 	var key_array = encrypted_key.replace("[", "").replace("]", "").split(",")
-	var open_ai_api_key = EncryptionUtility.decrypt_data(key, PackedByteArray(Array(key_array)))
-	print("Api key: %s " % open_ai_api_key)
-	return open_ai_api_key
+	var api_key = decrypt_data(key, PackedByteArray(Array(key_array)))
+	print("Api key: %s " % api_key)
+	return api_key
