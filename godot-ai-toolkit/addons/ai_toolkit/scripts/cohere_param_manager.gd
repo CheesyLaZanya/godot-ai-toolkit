@@ -17,8 +17,11 @@ var secrets_file_path = toolkit_path + secrets_folder_path + "/cohere.json"
 var parameters_loaded = false
 var parameters_file_path = "res://addons/ai_toolkit/parameters/cohere.json"
 
+var first_time_setup_complete = false
+
 func _ready():
-	first_time_setup()
+	if not first_time_setup_complete:
+		first_time_setup()
 
 
 func first_time_setup():
@@ -32,6 +35,8 @@ func first_time_setup():
 		save_parameters()
 		parameters_loaded = true
 
+	first_time_setup_complete = true
+
 
 func save_secrets():
 	ParameterUtility.save_as_json(secrets, secrets_file_path)
@@ -42,6 +47,9 @@ func save_parameters():
 
 
 func load_secrets():
+	if not first_time_setup_complete:
+		first_time_setup()
+
 	secrets = ParameterUtility.load_json_data(secrets_file_path)
 	secrets_loaded = true
 
