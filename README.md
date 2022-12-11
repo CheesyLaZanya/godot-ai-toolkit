@@ -13,7 +13,7 @@ The goal for this project is to create a toolkit to help interface between Godot
 
 # Completed Work
 
-A plugin for Godot was successfully made to facilitate configuring integrated APIs from within the Godot user interface.
+An addon for Godot was successfully made to facilitate configuring integrated APIs from within the Godot user interface.
 
 Integrations were completed for the following APIs:
 - co:here (used for semantic analysis). See more at [co:here's website](https://cohere.ai/)
@@ -50,9 +50,9 @@ Future work would likely be focused mainly on two aspects:
 
 # Setup
 
-1. Download Godot 4.0 Beta 7
+1. Download and extract the Godot 4.0 Beta 7
 
-This project was made for the latest Godot 4 beta build (Godot 4.0 Beta 7 at the time of writing).
+This project was made for the latest Godot 4 beta build (Godot 4.0 Beta 7 at the time of writing)
 It uses the standard build of Godot (not .NET)
 Godot 4.0 Beta 7 can be found here: [https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7#downloads](https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7#downloads)
 
@@ -62,8 +62,8 @@ Godot 4.0 Beta 7 can be found here: [https://godotengine.org/article/dev-snapsho
 git clone https://github.com/zkenshin/godot-ai-toolkit.git
 ```
 
-3. Open the inner godot-ai-toolkit folder in Godot (via import project)
+3. Import the project using the project.godot file found inside the inner godot-ai-toolkit
 
-4. On the left, use our toolkit to configure an OpenAI api key (and change any desired parameters), and a Co:here api key
+4. On the left, use our toolkit to configure an OpenAI api key (and change any desired parameters), and a co:here api key
 
-5. Run the project and try out the sample visual novel to see a small slice of what AI integration with Godot can look like.
+5. Run the project and try out the sample visual novel or sample RPG to see a small slice of what AI integration with Godot can look like
