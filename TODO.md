@@ -11,7 +11,7 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Setup todo and idea list section for collaboration
 - [x] Dump initial idea list
 - [x] Add initial Godot Project
-- [ ] Sign up for devpost accounts
+- [x] Sign up for devpost accounts
 - [x] Find documentation on creating Godot plugins
     https://docs.godotengine.org/en/latest/tutorials/plugins/editor/making_plugins.html
 - [x] Add empty plugin
@@ -32,7 +32,7 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Setup encryption for API keys to allow saving them in project without leaking them in git.
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
-- [ ] Look at collapsible dock sections for different AI/APIs
+- [x] Look at collapsible dock sections for different AI/APIs
 - [ ] Split API key out from other params?
 - [ ] Setup example scene
 - [ ] Code refactor/improvement
