@@ -8,7 +8,7 @@ What if we could make it easier for them to use existing AI tools in their games
 
 ## What it does
 
-We created a AI toolkit for Godot (a cross-platform, free and open-source game engine popular among indie game developers) to help facilitate setting up and using third party AI APIs.
+We created an AI toolkit for Godot (a cross-platform, free and open-source game engine popular among indie game developers) to help facilitate setting up and using third party AI APIs.
 
 Specifically, we made an addon to Godot itself, which adds a new AI configuration dock to the UI, which can let you set your API keys and AI parameters directly from the Godot user interface.
 
@@ -24,11 +24,11 @@ For the sample projects we included, we created AI art using a mix of Midjourney
 
 ## Challenges we ran into
 
-We struggled for a while dealing with aspects such as storing API keys in a somewhat secure way for developers while they work, as cryptography isn't necessarily playing to Godot's strength.
+We struggled for a while dealing with aspects such as storing API keys in a somewhat secure way for developers while they work, as cryptography isn't necessarily playing to Godot's strengths.
 
 ## Accomplishments that we're proud of
 
-We're proud of the fact that we tackled a bunch of things we didn't really have experience with, from using new APIs, to creating a addon for Godot, and managed to submit something within the time limits of the hackathon.
+We're proud of the fact that we tackled a bunch of things we didn't really have experience with, from using new APIs, to creating an addon for Godot, and managed to submit something within the time limits of the hackathon.
 
 We also managed to not only create the addon we were hoping for, but were able to include two sample projects, which would be essential for developer adoption.
 
@@ -61,7 +61,7 @@ Godot, gdscript, OpenAI, GPT3, co:here, midjourney, novelai
 
 https://github.com/zkenshin/godot-ai-toolkit
 
-# Image Gallary
+# Image Gallery
 - Homepage with VN selected
 - Professor name comment
 - VN date comment
