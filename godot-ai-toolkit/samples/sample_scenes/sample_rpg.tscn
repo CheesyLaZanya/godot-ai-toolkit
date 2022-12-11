@@ -1,6 +1,109 @@
-[gd_scene load_steps=2 format=3 uid="uid://8yec4v2ntmyx"]
+[gd_scene load_steps=7 format=3 uid="uid://tfuyfb8ptuto"]
 
-[ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_rpg.gd" id="1_6cplc"]
+[ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_return.gd" id="1_mgeih"]
+[ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_rpg.gd" id="2_lqskd"]
+[ext_resource type="Texture2D" uid="uid://dw2rvsidgltih" path="res://samples/sample_assets/sample_rpg/rpg_researcher.png" id="2_y1x0r"]
+[ext_resource type="Texture2D" uid="uid://b3j85sk7evgfs" path="res://samples/sample_assets/sample_rpg/rpg_sword.png" id="3_4avmu"]
 
-[node name="sample_rpg" type="Node2D"]
-script = ExtResource("1_6cplc")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kvv7"]
+bg_color = Color(0.168627, 0.27451, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5juy"]
+bg_color = Color(0.403922, 0.4, 0.411765, 0.490196)
+
+[node name="sample_rpg" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mgeih")
+
+[node name="RPG Panel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_lqskd")
+
+[node name="Backdrop Image" type="ColorRect" parent="RPG Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.815686, 0.815686, 0.815686, 1)
+
+[node name="Story Panel" type="Panel" parent="RPG Panel"]
+self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0192708
+anchor_top = 0.587963
+anchor_right = 0.982813
+anchor_bottom = 0.957407
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kvv7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Story Text Label" type="Label" parent="RPG Panel/Story Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0126126
+anchor_top = 0.0515873
+anchor_right = 0.989189
+anchor_bottom = 0.551587
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "Some story text here."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Story Text Input" type="LineEdit" parent="RPG Panel/Story Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0124324
+anchor_top = 0.566667
+anchor_right = 0.989189
+anchor_bottom = 0.892857
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5juy")
+alignment = 1
+caret_blink = true
+metadata/_edit_use_anchors_ = true
+
+[node name="RPG Researcher Image" type="TextureRect" parent="RPG Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.0564815
+anchor_right = 0.629167
+anchor_bottom = 0.552778
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y1x0r")
+ignore_texture_size = true
+metadata/_edit_use_anchors_ = true
+
+[node name="RPG Weapon Image" type="TextureRect" parent="RPG Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.0564815
+anchor_right = 0.629167
+anchor_bottom = 0.552778
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4avmu")
+ignore_texture_size = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="text_submitted" from="RPG Panel/Story Panel/Story Text Input" to="RPG Panel" method="_on_story_text_input_text_submitted"]

@@ -1,0 +1,83 @@
+[
+    {
+        "dialog": "Welcome to the world of fantasAI!",
+        "input": false,
+        "id": 0,
+        "tag": "researcher appearance"
+    },
+    {
+        "dialog": "What is your name?",
+        "input": true,
+        "id": 1,
+        "tag": "name"
+    },
+    {
+        "dialog": "Ah thank you, let's see here. . .",
+        "input": false,
+        "id": 2
+    },  
+    {
+        "dialog": "[[USER_INPUT]], is it?",
+        "input": false,
+        "id": 3
+    }, 
+    {
+        "dialog": "Hmmm . . .",
+        "input": false,
+        "id": 4
+    },
+    {
+        "dialog": "[[AI_INPUT]]",
+        "input": false,
+        "id": 5
+    },
+    {
+        "dialog": "Anyways . . .",
+        "input": false,
+        "id": 6
+    },
+    {
+        "dialog": "In this world, you'll face many obstacles!",
+        "input": false,
+        "id": 7
+    },
+    {
+        "dialog": "Most of them with teeth or claws, or sharpened steel!",
+        "input": false,
+        "id": 8,
+        "tag": "weapon appearance"
+    },
+    {
+        "dialog": "What sort of weapon do you imagine using?",
+        "input": true,
+        "id": 9,
+        "tag": "weapon"
+    },
+    {
+        "dialog": ". . . Yes you'll need something grand indeed to be the true hero!",
+        "input": false,
+        "id": 10,
+        "tag": "researcher reappearance"
+    },
+    {
+        "dialog": "Oh, you already have a weapon in mind?",
+        "input": false,
+        "id": 11
+    },
+    {
+        "dialog": "A what? [[USER_INPUT]]?",
+        "input": false,
+        "id": 12
+    },
+    {
+        "dialog": "[[AI_INPUT]]",
+        "input": false,
+        "id": 13
+    },
+    {
+        "dialog": "*Sigh* I can't work with this amateur.",
+        "input": false,
+        "id": 14,
+        "tag": "ending"
+    }
+]
