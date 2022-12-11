@@ -15,7 +15,9 @@ var parameters = {
 }
 
 var secrets_loaded = false
-var secrets_file_path = "res://addons/ai_toolkit/secrets/openai.json"
+var toolkit_path = "res://addons/ai_toolkit"
+var secrets_folder_path = "/secrets/"
+var secrets_file_path = toolkit_path + secrets_folder_path + "/openai.json"
 
 var parameters_loaded = false
 var parameters_file_path = "res://addons/ai_toolkit/parameters/openai.json"
@@ -26,6 +28,9 @@ func _ready():
 
 func first_time_setup():
 	if not FileAccess.file_exists(secrets_file_path):
+		var dir = DirAccess.open(toolkit_path)
+		if not toolkit_path.dir_exists(secrets_folder_path):
+			toolkit_path.make_dir(secrets_folder_path)
 		set_api_key("Secret")
 		secrets_loaded = true
 	if not FileAccess.file_exists(parameters_file_path):
