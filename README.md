@@ -19,7 +19,7 @@ Integrations were completed for the following APIs:
 - co:here (used for semantic analysis). See more at [https://cohere.ai/](co:here's website)
 - OpenAI GPT (used for text generation). See more at [https://openai.com/](OpenAI's website)
 
-These were then used in a sample scene to demonstrate how they can be used in practice for game development.
+These were then used in two sample scenes to demonstrate how they can be used in practice for game development.
 
 # Asset References
 

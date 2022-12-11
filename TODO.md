@@ -34,24 +34,23 @@ Here are the things we've identified need done to complete this hackathon/projec
 - [x] Add parameter saving and loading
 - [x] Used saved parameters in test api call
 - [x] Look at collapsible dock sections for different AI/APIs
-- [ ] Setup example start scene that links to others
-- [ ] Fix API key decryption after recent changes
-- [ ] Make sample visual novel date
-    - [ ] Where did you go on a date?
-        - [ ] Have open AI describe the date briefly.
-    - [ ] Ask how they enjoyed the date
-        - [ ] Have date respond based on Cohere analysis, use "where" in task description.
+- [x] Setup example start scene that links to others
+- [x] Make sample visual novel date
+    - [x] Where did you go on a date?
+        - [x] Have open AI describe the date briefly.
+    - [x] Ask how they enjoyed the date
+        - [x] Have date respond based on Cohere analysis, use "where" in task description.
 - [ ] Make sample RPG Intro
     - [ ] Ask for name
         - [ ] Comment on how "fantasy" the name is or isn't?
     - [ ] Ask for their chosen weapon
         - [ ] Respond sarcastically about it
-- [ ] Cleanup example start scene that links to others (or remove if only one finished)
-- [ ] Review if we're completing the RPG or not and update our readme if so.
-- [ ] Either fix secret folder starting in the project, or add to instructions to create it.
-- [ ] Make Co:here API easier to use
+- [x] Cleanup example start scene that links to others (or remove if only one finished)
+- [x] Review if we're completing the RPG or not and update our readme if so.
+- [x] Either fix secret folder starting in the project, or add to instructions to create it.
+- [x] Make Co:here API easier to use
 - [x] Split API key out from parameters
-- [ ] Code refactor/improvement
+- [x] Code refactor/improvement
 - [x] Create project icon
 - [ ] Finalize plugin information
 - [x] Create setup instructions
