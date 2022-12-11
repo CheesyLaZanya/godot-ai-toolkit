@@ -11,6 +11,7 @@ func save_as_json(data, file_path):
 func load_json_data(file_path):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	
+	print("Loading contents from %s" % file_path)
 	var file_contents = file.get_as_text()
 	
 	var json_parser = JSON.new()
