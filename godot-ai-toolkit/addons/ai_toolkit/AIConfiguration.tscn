@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://pqba50d0p74n"]
+[gd_scene load_steps=6 format=3 uid="uid://pqba50d0p74n"]
 
 [ext_resource type="Script" path="res://addons/ai_toolkit/scripts/openai_configuration.gd" id="1_pfuy8"]
+[ext_resource type="Script" path="res://addons/ai_toolkit/ai_selection.gd" id="1_uvxuy"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgws3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x83xn"]
 bg_color = Color(0.25098, 0.266667, 0.298039, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxh2d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s1xj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6v0a"]
 bg_color = Color(0.113725, 0.133333, 0.160784, 1)
 
 [node name="AI Configuration" type="Control"]
@@ -23,48 +27,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uvxuy")
 
-[node name="OpenAI Panel" type="Panel" parent="Dock Panel"]
+[node name="AI Selection Panel" type="Panel" parent="Dock Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020979
 anchor_top = 0.00925926
 anchor_right = 0.979021
-anchor_bottom = 0.986111
-script = ExtResource("1_pfuy8")
-metadata/_edit_use_anchors_ = true
-
-[node name="OpenAI Label Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.0510753
+anchor_bottom = 0.0601852
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_bgws3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x83xn")
 metadata/_edit_use_anchors_ = true
 
-[node name="OpenAI Label" type="Label" parent="Dock Panel/OpenAI Panel/OpenAI Label Panel"]
+[node name="AI Selection" type="OptionButton" parent="Dock Panel/AI Selection Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -29.0
-offset_top = -13.0
-offset_right = 29.0
-offset_bottom = 13.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
-text = "OpenAI"
+theme_override_styles/normal = SubResource("StyleBoxFlat_0s1xj")
+alignment = 1
+expand_icon = true
+item_count = 3
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Choose an AI Provider"
+popup/item_0/id = 0
+popup/item_1/text = "co:here"
+popup/item_1/id = 1
+popup/item_2/text = "OpenAI"
+popup/item_2/id = 2
+
+[node name="OpenAI Panel" type="Panel" parent="Dock Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020979
+anchor_top = 0.066358
+anchor_right = 0.979021
+anchor_bottom = 1.04321
+script = ExtResource("1_pfuy8")
+metadata/_edit_use_anchors_ = true
 
 [node name="API Key Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.0521327
+anchor_top = 0.00157977
 anchor_right = 1.0
-anchor_bottom = 0.129542
+anchor_bottom = 0.0789891
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -89,8 +102,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "test"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
 alignment = 1
 secret = true
 metadata/_edit_use_anchors_ = true
@@ -98,9 +110,9 @@ metadata/_edit_use_anchors_ = true
 [node name="GPT Model Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.134281
+anchor_top = 0.0837281
 anchor_right = 1.0
-anchor_bottom = 0.21169
+anchor_bottom = 0.161137
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -128,10 +140,10 @@ anchor_right = 1.0
 anchor_bottom = 0.999999
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
 alignment = 1
 item_count = 12
-selected = 1
+selected = 11
 fit_to_longest_item = false
 popup/item_0/text = "ada"
 popup/item_0/id = 0
@@ -162,9 +174,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Temperature Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.21643
+anchor_top = 0.165877
 anchor_right = 1.0
-anchor_bottom = 0.293839
+anchor_bottom = 0.243286
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -192,8 +204,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "0.29"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+text = "0.7"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -207,15 +219,15 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 1.0
 step = 0.01
-value = 0.29
+value = 0.7
 metadata/_edit_use_anchors_ = true
 
 [node name="Max Tokens Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.300158
+anchor_top = 0.249605
 anchor_right = 1.0
-anchor_bottom = 0.377567
+anchor_bottom = 0.327014
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -243,8 +255,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "1695"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+text = "256"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -258,15 +270,15 @@ grow_horizontal = 2
 grow_vertical = 0
 min_value = 1.0
 max_value = 2048.0
-value = 1695.0
+value = 256.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Top P Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.383887
+anchor_top = 0.333334
 anchor_right = 1.0
-anchor_bottom = 0.461296
+anchor_bottom = 0.410743
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -294,8 +306,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "0.14"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+text = "1"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -309,15 +321,15 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 1.0
 step = 0.01
-value = 0.14
+value = 1.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Frequency Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.467615
+anchor_top = 0.417062
 anchor_right = 1.0
-anchor_bottom = 0.545024
+anchor_bottom = 0.494471
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -345,8 +357,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "1.72"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -360,15 +372,14 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 2.0
 step = 0.01
-value = 1.72
 metadata/_edit_use_anchors_ = true
 
 [node name="Presence Penalty Panel" type="Panel" parent="Dock Panel/OpenAI Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.551343
+anchor_top = 0.50079
 anchor_right = 1.0
-anchor_bottom = 0.628752
+anchor_bottom = 0.578199
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
@@ -396,8 +407,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fxh2d")
-text = "1.41"
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+text = "0"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -411,9 +422,88 @@ grow_horizontal = 2
 grow_vertical = 0
 max_value = 2.0
 step = 0.01
-value = 1.41
 metadata/_edit_use_anchors_ = true
 
+[node name="Cohere Panel" type="Panel" parent="Dock Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020979
+anchor_top = 0.066358
+anchor_right = 0.979021
+anchor_bottom = 1.04321
+metadata/_edit_use_anchors_ = true
+
+[node name="API Key Panel" type="Panel" parent="Dock Panel/Cohere Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.00157977
+anchor_right = 1.0
+anchor_bottom = 0.0789891
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="API Key Label" type="Label" parent="Dock Panel/Cohere Panel/API Key Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.530612
+grow_horizontal = 2
+tooltip_text = "Test"
+mouse_filter = 1
+text = "API Key"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="API Key Input" type="LineEdit" parent="Dock Panel/Cohere Panel/API Key Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.530612
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+alignment = 1
+secret = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Panel" type="Panel" parent="Dock Panel/Cohere Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.085308
+anchor_right = 1.0
+anchor_bottom = 0.162717
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Label" type="Label" parent="Dock Panel/Cohere Panel/Model Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.530612
+grow_horizontal = 2
+tooltip_text = "Test"
+mouse_filter = 1
+text = "Model"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Model Dropdown" type="OptionButton" parent="Dock Panel/Cohere Panel/Model Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.530612
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_n6v0a")
+alignment = 1
+fit_to_longest_item = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="item_selected" from="Dock Panel/AI Selection Panel/AI Selection" to="Dock Panel" method="_on_ai_selection_item_selected"]
 [connection signal="focus_exited" from="Dock Panel/OpenAI Panel/API Key Panel/API Key Input" to="Dock Panel/OpenAI Panel" method="_on_api_key_input_focus_exited"]
 [connection signal="text_submitted" from="Dock Panel/OpenAI Panel/API Key Panel/API Key Input" to="Dock Panel/OpenAI Panel" method="_on_api_key_input_text_submitted"]
 [connection signal="item_selected" from="Dock Panel/OpenAI Panel/GPT Model Panel/GPT Model Dropdown" to="Dock Panel/OpenAI Panel" method="_on_gpt_model_dropdown_item_selected"]
