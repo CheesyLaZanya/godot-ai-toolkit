@@ -13,7 +13,8 @@ config_version=5
 config/name="Godot AI Toolkit"
 run/main_scene="res://samples/sample_scenes/sample_start.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://toolkit_icon.png"
+config/windows_native_icon="res://toolkit_icon.ico"
 
 [autoload]
 
