@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmpsaw8ecsd3c"]
+[gd_scene load_steps=10 format=3 uid="uid://dmpsaw8ecsd3c"]
 
 [ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_visual_novel.gd" id="1_3ansm"]
 [ext_resource type="Texture2D" uid="uid://de22plrqgwmr3" path="res://samples/sample_assets/sample_visual_novel/date_backdrop.png" id="1_knrlv"]
+[ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_return.gd" id="1_rwac7"]
 [ext_resource type="Texture2D" uid="uid://cmh1bivalacuc" path="res://samples/sample_assets/sample_visual_novel/date_default.png" id="2_7am6s"]
 [ext_resource type="Texture2D" uid="uid://bm2x787mr7p3y" path="res://samples/sample_assets/sample_visual_novel/date_neutral.png" id="4_1s3s4"]
 [ext_resource type="Texture2D" uid="uid://bjgjkbmfuoepd" path="res://samples/sample_assets/sample_visual_novel/date_positive.png" id="5_en7x7"]
@@ -20,9 +21,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rwac7")
 
 [node name="Novel Panel" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -31,7 +33,6 @@ grow_vertical = 2
 script = ExtResource("1_3ansm")
 
 [node name="Backdrop Image" type="TextureRect" parent="Novel Panel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,7 +43,6 @@ ignore_texture_size = true
 
 [node name="Story Panel" type="Panel" parent="Novel Panel"]
 self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0190972
 anchor_top = 0.587963
@@ -54,7 +54,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1kvv7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Label" type="Label" parent="Novel Panel/Story Panel"]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0126126
 anchor_top = 0.0515873
@@ -68,7 +67,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Input" type="LineEdit" parent="Novel Panel/Story Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0124324
 anchor_top = 0.566667
@@ -83,7 +81,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Date Image Base" type="TextureRect" parent="Novel Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394792
 anchor_top = 0.0314815
@@ -97,7 +94,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Date Image Neutral" type="TextureRect" parent="Novel Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394792
 anchor_top = 0.0314815
@@ -111,7 +107,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Date Image Positive" type="TextureRect" parent="Novel Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394792
 anchor_top = 0.0314815
@@ -125,7 +120,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Date Image Negative" type="TextureRect" parent="Novel Panel"]
 visible = false
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.394792
 anchor_top = 0.0314815
