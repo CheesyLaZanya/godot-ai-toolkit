@@ -2,11 +2,17 @@
 extends Node
 
 var crypto = Crypto.new()
-var key_path = "res://addons/ai_toolkit/secrets/generated.key"
+var toolkit_path = "res://addons/ai_toolkit"
+var secrets_folder_path = "/secrets/"
+var key_path = toolkit_path + secrets_folder_path + "/generated.key"
 
 func get_encryption_key():
 	var key = CryptoKey.new()
 	if not FileAccess.file_exists(key_path):
+		var dir = DirAccess.open(toolkit_path)
+		if not dir.dir_exists(secrets_folder_path):
+			dir.make_dir(secrets_folder_path)
+		
 		# Generate new RSA key.
 		key = crypto.generate_rsa(4096)
 	
