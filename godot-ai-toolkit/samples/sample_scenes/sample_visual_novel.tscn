@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmpsaw8ecsd3c"]
+[gd_scene load_steps=9 format=3 uid="uid://dmpsaw8ecsd3c"]
 
 [ext_resource type="Script" path="res://samples/sample_scripts/sample_scene_visual_novel.gd" id="1_3ansm"]
 [ext_resource type="Texture2D" uid="uid://de22plrqgwmr3" path="res://samples/sample_assets/sample_visual_novel/date_backdrop.png" id="1_knrlv"]
 [ext_resource type="Texture2D" uid="uid://cmh1bivalacuc" path="res://samples/sample_assets/sample_visual_novel/date_default.png" id="2_7am6s"]
+[ext_resource type="Texture2D" uid="uid://bm2x787mr7p3y" path="res://samples/sample_assets/sample_visual_novel/date_neutral.png" id="4_1s3s4"]
+[ext_resource type="Texture2D" uid="uid://bjgjkbmfuoepd" path="res://samples/sample_assets/sample_visual_novel/date_positive.png" id="5_en7x7"]
+[ext_resource type="Texture2D" uid="uid://dc0k5mego3hw0" path="res://samples/sample_assets/sample_visual_novel/date_negative.png" id="6_g0gsv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kvv7"]
 bg_color = Color(0, 0, 0, 1)
@@ -77,7 +80,7 @@ alignment = 1
 caret_blink = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Date Image" type="TextureRect" parent="Novel Panel"]
+[node name="Date Image Base" type="TextureRect" parent="Novel Panel"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -88,6 +91,48 @@ anchor_bottom = 0.586111
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_7am6s")
+ignore_texture_size = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Date Image Neutral" type="TextureRect" parent="Novel Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.394792
+anchor_top = 0.0314815
+anchor_right = 0.602604
+anchor_bottom = 0.586111
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1s3s4")
+ignore_texture_size = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Date Image Positive" type="TextureRect" parent="Novel Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.394792
+anchor_top = 0.0314815
+anchor_right = 0.602604
+anchor_bottom = 0.586111
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_en7x7")
+ignore_texture_size = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Date Image Negative" type="TextureRect" parent="Novel Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.394792
+anchor_top = 0.0314815
+anchor_right = 0.602604
+anchor_bottom = 0.586111
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_g0gsv")
 ignore_texture_size = true
 metadata/_edit_use_anchors_ = true
 

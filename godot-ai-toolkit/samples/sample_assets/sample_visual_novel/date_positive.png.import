@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjgjkbmfuoepd"
-path="res://.godot/imported/date_happy.png-885e42bae159552f22cf1bea33868a7d.ctex"
+path="res://.godot/imported/date_positive.png-ba1a59903d1663b0f79ab42e27aff56c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://samples/sample_assets/sample_visual_novel/date_happy.png"
-dest_files=["res://.godot/imported/date_happy.png-885e42bae159552f22cf1bea33868a7d.ctex"]
+source_file="res://samples/sample_assets/sample_visual_novel/date_positive.png"
+dest_files=["res://.godot/imported/date_positive.png-ba1a59903d1663b0f79ab42e27aff56c.ctex"]
 
 [params]
 

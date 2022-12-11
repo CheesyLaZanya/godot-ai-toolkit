@@ -5,7 +5,7 @@
         "id": 0
     },
     {
-        "dialog": "Where did you go on a date?",
+        "dialog": "Where did you go on your date?",
         "input": true,
         "id": 1
     },
@@ -20,17 +20,17 @@
         "id": 3
     },
     {
-        "dialog": "Ah, the %s.",
+        "dialog": "Ah, the [[USER_INPUT]].",
         "input": false,
         "id": 4
     },
     {
-        "dialog": "%s",
+        "dialog": "[[AI_INPUT]]",
         "input": false,
         "id": 5
     },
     {
-        "dialog": "\"What are you so deep in thought about?\", you hear from your right.",
+        "dialog": "\"What are you so deep in thought about?\" you hear from your right.",
         "input": false,
         "id": 6
     },
@@ -65,7 +65,7 @@
         "id": 12
     },
     {
-        "dialog": "\"%s?\" she repeats softly . . .",
+        "dialog": "\"[[USER_INPUT]]?\" she repeats softly . . .",
         "input": false,
         "id": 13
     },
