@@ -6,7 +6,7 @@ var secrets = {
 }
 
 var parameters = {
-	model = "medium"
+	model = "large"
 }
 
 var secrets_loaded = false

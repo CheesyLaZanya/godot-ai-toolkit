@@ -21,7 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_mgeih")
 
 [node name="RPG Panel" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,7 +30,7 @@ grow_vertical = 2
 script = ExtResource("2_lqskd")
 
 [node name="Backdrop Image" type="ColorRect" parent="RPG Panel"]
-anchors_preset = 15
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -39,7 +39,7 @@ color = Color(0.815686, 0.815686, 0.815686, 1)
 
 [node name="Story Panel" type="Panel" parent="RPG Panel"]
 self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.0192708
 anchor_top = 0.587963
 anchor_right = 0.982813
@@ -50,7 +50,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1kvv7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Label" type="Label" parent="RPG Panel/Story Panel"]
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.0126126
 anchor_top = 0.0515873
 anchor_right = 0.989189
@@ -62,7 +62,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Story Text Input" type="LineEdit" parent="RPG Panel/Story Panel"]
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.0124324
 anchor_top = 0.566667
 anchor_right = 0.989189
@@ -76,7 +76,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RPG Researcher Image" type="TextureRect" parent="RPG Panel"]
 visible = false
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.35
 anchor_top = 0.0564815
 anchor_right = 0.629167
@@ -84,12 +84,12 @@ anchor_bottom = 0.552778
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_y1x0r")
-ignore_texture_size = true
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="RPG Weapon Image" type="TextureRect" parent="RPG Panel"]
 visible = false
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.35
 anchor_top = 0.0564815
 anchor_right = 0.629167
@@ -97,7 +97,7 @@ anchor_bottom = 0.552778
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_4avmu")
-ignore_texture_size = true
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="text_submitted" from="RPG Panel/Story Panel/Story Text Input" to="RPG Panel" method="_on_story_text_input_text_submitted"]

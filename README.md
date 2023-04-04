@@ -1,6 +1,8 @@
 # godot-ai-toolkit
 An interaction layer between Godot and AI apis/tools to accelerate developing games with AI. Our entry for the 2022 Assembly AI Hackathon.
 
+Updated April 4th, 2023 to support Godot 4.0.1 and recent API changes.
+
 # Our Team
 
 This project was made by a team of two:
@@ -38,7 +40,7 @@ Images were processed using the Pinta application.
 
 # Future Work
 
-Future work would likely be focused mainly on two aspects:
+Future work could likely be focused mainly on three aspects:
 
 1. More integrations, and ease of adding new integrations. These could include:
     - Add Uberduck to allow characters to speak written or generated dialog
@@ -48,13 +50,13 @@ Future work would likely be focused mainly on two aspects:
 
 2. Ease of use/adoptability. We think the available AI tools can already be helpful in their current form, and the next focus in the industry are tools like this to help spread adoption and awareness of what AI can do for creators and businesses.
 
+3. Updating the project to support GPT chat completiton endpoints.
+
 # Setup
 
-1. Download and extract the Godot 4.0 Beta 7
+1. Download and extract Godot 4.0.x from https://godotengine.org/download/windows/
 
-This project was made for the latest Godot 4 beta build (Godot 4.0 Beta 7 at the time of writing)
-It uses the standard build of Godot (not .NET)
-Godot 4.0 Beta 7 can be found here: [https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7#downloads](https://godotengine.org/article/dev-snapshot-godot-4-0-beta-7#downloads)
+It was made using the standard build of Godot (not .NET)
 
 2. Git clone the project
 

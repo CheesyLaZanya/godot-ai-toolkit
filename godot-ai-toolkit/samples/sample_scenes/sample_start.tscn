@@ -250,7 +250,7 @@ anchor_bottom = 0.64352
 offset_top = 31.0
 offset_bottom = 31.0
 texture = ExtResource("2_8yb8h")
-ignore_texture_size = true
+expand_mode = 1
 
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/RPGSampleButton" to="." method="_on_rpg_sample_button_button_up"]
 [connection signal="button_up" from="SampleScreenPanel/ButtonPanel/SampleButtonVBox/VisualNovelSampleButton" to="." method="_on_visual_novel_sample_button_button_up"]
