@@ -61,7 +61,7 @@ It was made using the standard build of Godot (not .NET)
 2. Git clone the project
 
 ```shell
-git clone https://github.com/zkenshin/godot-ai-toolkit.git
+git clone https://github.com/CheesyLaZanya/godot-ai-toolkit.git
 ```
 
 3. Create a "secrets" folder inside the path "godot-ai-toolkit\godot-ai-toolkit\addons\ai_toolkit"
